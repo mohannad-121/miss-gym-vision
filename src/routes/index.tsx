@@ -1,29 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "sonner";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFloat, DemoBadge } from "@/components/Floating";
+import {
+  Hero, About, Gallery, Menu, Classes, Location, Offers, AIAssistant, Contact,
+} from "@/components/sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Miss Gym Fitness — Women's Gym in Jordan" },
+      { name: "description", content: "A premium women-focused fitness space in Jordan. Private classes, dance, Zumba, personal training, protein bar and more." },
+      { property: "og:title", content: "Miss Gym Fitness — Women's Gym in Jordan" },
+      { property: "og:description", content: "Train strong, feel confident. Women-focused gym in Jordan." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <Toaster position="top-right" theme="dark" richColors />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Gallery />
+        <Menu />
+        <Classes />
+        <Location />
+        <Offers />
+        <AIAssistant />
+        <Contact />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
+      <DemoBadge />
     </div>
   );
 }
