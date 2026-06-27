@@ -1,13 +1,36 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import {
-  Sparkles, Heart, Target, Users, MapPin, Phone, MessageCircle,
-  Calendar, Clock, ChevronRight, Send, Bot, Instagram, Facebook,
-  Dumbbell, Coffee, Apple, Pill, X,
+  Sparkles,
+  Heart,
+  Target,
+  Users,
+  MapPin,
+  Phone,
+  MessageCircle,
+  Calendar,
+  Clock,
+  ChevronRight,
+  Send,
+  Bot,
+  Instagram,
+  Facebook,
+  Dumbbell,
+  Coffee,
+  Apple,
+  Pill,
+  X,
+  BadgeDollarSign,
 } from "lucide-react";
 import { Logo } from "./Logo";
 import {
-  useProducts, useGallery, useClasses, useBookings, useOffers, useSettings, newId,
+  useProducts,
+  useGallery,
+  useClasses,
+  useBookings,
+  useOffers,
+  useSettings,
+  newId,
 } from "@/lib/mockData";
 
 /* ------------------------------- HERO ------------------------------- */
@@ -30,17 +53,28 @@ export function Hero() {
             <span className="text-gradient-pink">Feel Confident.</span>
           </h1>
           <p className="text-lg text-white/70 max-w-xl">
-            Miss Gym Fitness is a women-focused fitness space in Jordan designed to help you
-            build strength, confidence, and a healthier lifestyle.
+            Miss Gym Fitness is a women-focused fitness space in Jordan designed to help you build
+            strength, confidence, and a healthier lifestyle.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="#classes" className="bg-gradient-pink text-white font-semibold px-6 py-3.5 rounded-full glow-pink hover:scale-105 transition flex items-center gap-2">
+            <a
+              href="#classes"
+              className="bg-gradient-pink text-white font-semibold px-6 py-3.5 rounded-full glow-pink hover:scale-105 transition flex items-center gap-2"
+            >
               Book a Private Class <ChevronRight size={18} />
             </a>
-            <a href="#menu" className="glass text-white font-semibold px-6 py-3.5 rounded-full hover:border-pink-hot/50 transition">
+            <a
+              href="#menu"
+              className="glass text-white font-semibold px-6 py-3.5 rounded-full hover:border-pink-hot/50 transition"
+            >
               View Products Menu
             </a>
-            <a href="https://maps.app.goo.gl/FdX8UUSwYnJjog3z9" target="_blank" rel="noreferrer" className="text-white font-semibold px-6 py-3.5 rounded-full border border-white/15 hover:border-pink-hot/50 transition flex items-center gap-2">
+            <a
+              href="https://maps.app.goo.gl/FdX8UUSwYnJjog3z9"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white font-semibold px-6 py-3.5 rounded-full border border-white/15 hover:border-pink-hot/50 transition flex items-center gap-2"
+            >
               <MapPin size={18} /> Open Location
             </a>
           </div>
@@ -83,16 +117,28 @@ export function Hero() {
           <div className="absolute -top-2 -left-4 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float">
             💪 Women-focused gym
           </div>
-          <div className="absolute top-20 -right-4 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float" style={{ animationDelay: "1s" }}>
+          <div
+            className="absolute top-20 -right-4 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
+            style={{ animationDelay: "1s" }}
+          >
             🧘 Private sessions
           </div>
-          <div className="absolute top-1/2 -left-6 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float" style={{ animationDelay: "2s" }}>
+          <div
+            className="absolute top-1/2 -left-6 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
+            style={{ animationDelay: "2s" }}
+          >
             💃 Fitness classes
           </div>
-          <div className="absolute bottom-32 -right-6 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float" style={{ animationDelay: "1.5s" }}>
+          <div
+            className="absolute bottom-32 -right-6 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
+            style={{ animationDelay: "1.5s" }}
+          >
             🥤 Protein bar
           </div>
-          <div className="absolute -bottom-2 left-12 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float" style={{ animationDelay: "0.5s" }}>
+          <div
+            className="absolute -bottom-2 left-12 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
+            style={{ animationDelay: "0.5s" }}
+          >
             ✨ Easy booking
           </div>
         </div>
@@ -104,9 +150,21 @@ export function Hero() {
 /* ------------------------------- ABOUT ------------------------------- */
 export function About() {
   const values = [
-    { icon: Heart, title: "Supportive Environment", desc: "A welcoming space made by women, for women." },
-    { icon: Users, title: "Professional Training", desc: "Certified coaches guiding every step of your journey." },
-    { icon: Target, title: "Goal-Based Programs", desc: "Tailored plans for strength, weight loss, and wellness." },
+    {
+      icon: Heart,
+      title: "Supportive Environment",
+      desc: "A welcoming space made by women, for women.",
+    },
+    {
+      icon: Users,
+      title: "Professional Training",
+      desc: "Certified coaches guiding every step of your journey.",
+    },
+    {
+      icon: Target,
+      title: "Goal-Based Programs",
+      desc: "Tailored plans for strength, weight loss, and wellness.",
+    },
   ];
   return (
     <section id="about" className="py-24">
@@ -115,13 +173,16 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
           <p className="text-lg text-white/70 leading-relaxed">
             Miss Gym Fitness is a dedicated women's fitness destination in Jordan offering a safe,
-            supportive, and motivating environment. From personalized training and group classes
-            to expert nutrition guidance and a relaxing protein bar, we provide everything you need
-            to reach your fitness goals — your way, at your pace.
+            supportive, and motivating environment. From personalized training and group classes to
+            expert nutrition guidance and a relaxing protein bar, we provide everything you need to
+            reach your fitness goals — your way, at your pace.
           </p>
           <div className="grid sm:grid-cols-3 gap-4">
             {values.map((v) => (
-              <div key={v.title} className="glass rounded-2xl p-6 hover:border-pink-hot/40 transition">
+              <div
+                key={v.title}
+                className="glass rounded-2xl p-6 hover:border-pink-hot/40 transition"
+              >
                 <div className="h-11 w-11 rounded-xl bg-gradient-pink grid place-items-center mb-4">
                   <v.icon size={20} className="text-white" />
                 </div>
@@ -130,6 +191,65 @@ export function About() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------------------- SUBSCRIPTIONS ---------------------------- */
+export function Subscriptions() {
+  const plans = [
+    { period: "1 Month", arabic: "اشتراك شهر", price: "25 دينار", highlight: false },
+    { period: "3 Months", arabic: "اشتراك 3 أشهر", price: "60 دينار", highlight: true },
+    { period: "6 Months", arabic: "اشتراك 6 أشهر", price: "110 دينار", highlight: false },
+    { period: "12 Months", arabic: "اشتراك 12 شهر", price: "205 دينار", highlight: false },
+  ];
+
+  return (
+    <section id="subscriptions" className="py-24 bg-[#0c0c0e]">
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeader eyebrow="Subscriptions" title="Miss Gym Membership Prices" />
+        <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-7 text-white/60">
+          Official Miss Gym subscription plans. الأسعار حسب منشور Miss Gym الرسمي.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+          {plans.map((plan) => (
+            <div
+              key={plan.period}
+              className={`relative overflow-hidden rounded-3xl p-6 transition hover:-translate-y-1 ${
+                plan.highlight ? "glass-pink glow-pink" : "glass"
+              }`}
+            >
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-pink" />
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="h-12 w-12 rounded-2xl bg-gradient-pink grid place-items-center">
+                  <BadgeDollarSign size={22} className="text-white" />
+                </div>
+                {plan.highlight && (
+                  <span className="rounded-full border border-pink-hot/40 bg-pink-hot/15 px-3 py-1 text-xs font-bold text-pink-soft">
+                    Best Value
+                  </span>
+                )}
+              </div>
+              <div className="text-sm font-semibold text-white/60">{plan.period}</div>
+              <div className="mt-1 text-sm font-semibold text-pink-soft" dir="rtl">
+                {plan.arabic}
+              </div>
+              <div className="mt-4 font-display text-4xl font-black text-white" dir="rtl">
+                {plan.price}
+              </div>
+              <a
+                href={`https://wa.me/962792570090?text=${encodeURIComponent(`Hi! I want to subscribe to Miss Gym: ${plan.arabic} = ${plan.price}`)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-7 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-pink py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
+              >
+                <MessageCircle size={16} /> Subscribe on WhatsApp
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -166,11 +286,20 @@ export function Gallery() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filtered.map((g) => (
-            <div key={g.id} className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass">
-              <img src={g.image} alt={g.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div
+              key={g.id}
+              className="group relative aspect-[4/5] rounded-2xl overflow-hidden glass"
+            >
+              <img
+                src={g.image}
+                alt={g.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-5">
-                <span className="text-[10px] tracking-widest uppercase text-pink-hot font-bold">{g.category}</span>
+                <span className="text-[10px] tracking-widest uppercase text-pink-hot font-bold">
+                  {g.category}
+                </span>
                 <div className="text-lg font-bold text-white mt-1">{g.title}</div>
                 <div className="text-xs text-white/70 mt-1">{g.description}</div>
               </div>
@@ -188,7 +317,12 @@ export function Menu() {
   const cats = ["All", "Drinks", "Protein", "Snacks", "Supplements"] as const;
   const [active, setActive] = useState<(typeof cats)[number]>("All");
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
-  const icons: Record<string, typeof Coffee> = { Drinks: Coffee, Protein: Dumbbell, Snacks: Apple, Supplements: Pill };
+  const icons: Record<string, typeof Coffee> = {
+    Drinks: Coffee,
+    Protein: Dumbbell,
+    Snacks: Apple,
+    Supplements: Pill,
+  };
 
   return (
     <section id="menu" className="py-24">
@@ -203,7 +337,9 @@ export function Menu() {
                 key={c}
                 onClick={() => setActive(c)}
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition flex items-center gap-2 ${
-                  active === c ? "bg-gradient-pink text-white glow-pink" : "glass text-white/70 hover:text-white"
+                  active === c
+                    ? "bg-gradient-pink text-white glow-pink"
+                    : "glass text-white/70 hover:text-white"
                 }`}
               >
                 {Icon && <Icon size={14} />} {c}
@@ -214,17 +350,28 @@ export function Menu() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {filtered.map((p) => (
-            <div key={p.id} className="glass rounded-2xl overflow-hidden group hover:border-pink-hot/40 transition">
+            <div
+              key={p.id}
+              className="glass rounded-2xl overflow-hidden group hover:border-pink-hot/40 transition"
+            >
               <div className="aspect-square overflow-hidden bg-surface">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <div className="text-[10px] uppercase tracking-widest text-pink-hot font-bold">{p.category}</div>
+                    <div className="text-[10px] uppercase tracking-widest text-pink-hot font-bold">
+                      {p.category}
+                    </div>
                     <div className="font-bold text-white mt-1">{p.name}</div>
                   </div>
-                  <span className={`text-[10px] px-2 py-1 rounded-full font-bold ${p.available ? "bg-green-500/15 text-green-400" : "bg-red-500/15 text-red-400"}`}>
+                  <span
+                    className={`text-[10px] px-2 py-1 rounded-full font-bold ${p.available ? "bg-green-500/15 text-green-400" : "bg-red-500/15 text-red-400"}`}
+                  >
                     {p.available ? "Available" : "Sold Out"}
                   </span>
                 </div>
@@ -232,7 +379,8 @@ export function Menu() {
                 <div className="mt-3 text-sm text-white/80 font-semibold">{p.price}</div>
                 <a
                   href={`https://wa.me/962700000000?text=${encodeURIComponent("Hi! I'd like to ask about: " + p.name)}`}
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   className="mt-4 w-full flex items-center justify-center gap-2 bg-gradient-pink text-white text-sm font-semibold py-2.5 rounded-xl hover:scale-[1.02] transition"
                 >
                   <MessageCircle size={14} /> Ask on WhatsApp
@@ -254,7 +402,12 @@ export function Classes() {
   const selectedClass = classes.find((c) => c.id === selected);
 
   const [form, setForm] = useState({
-    name: "", phone: "", date: "", time: "", goal: "", notes: "",
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    goal: "",
+    notes: "",
   });
 
   const submit = (e: React.FormEvent) => {
@@ -279,21 +432,27 @@ export function Classes() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
           {classes.map((c) => (
-            <div key={c.id} className="glass rounded-2xl overflow-hidden group hover:border-pink-hot/40 transition flex flex-col">
+            <div
+              key={c.id}
+              className="glass rounded-2xl overflow-hidden group hover:border-pink-hot/40 transition flex flex-col"
+            >
               <div className="aspect-[16/10] overflow-hidden">
-                <img src={c.image} alt={c.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
               </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="font-bold text-white text-lg">{c.name}</div>
                 <div className="flex items-center gap-4 mt-2 text-xs text-white/60">
-                  <span className="flex items-center gap-1"><Clock size={12} /> {c.duration}</span>
+                  <span className="flex items-center gap-1">
+                    <Clock size={12} /> {c.duration}
+                  </span>
                   <span>👩‍🏫 {c.trainer}</span>
                 </div>
                 <div className="text-sm text-white/80 font-semibold mt-3">{c.price}</div>
-                <button
-                  onClick={() => setSelected(c.id)}
-                  className="mt-auto pt-4 w-full"
-                >
+                <button onClick={() => setSelected(c.id)} className="mt-auto pt-4 w-full">
                   <span className="block bg-gradient-pink text-white text-sm font-semibold py-2.5 rounded-xl hover:scale-[1.02] transition">
                     Book This Class
                   </span>
@@ -306,29 +465,75 @@ export function Classes() {
 
       {/* Booking modal */}
       {selectedClass && (
-        <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm grid place-items-center p-4 animate-fade-up" onClick={() => setSelected(null)}>
-          <div className="bg-surface rounded-3xl border border-white/10 max-w-lg w-full p-6 relative" onClick={(e) => e.stopPropagation()}>
-            <button onClick={() => setSelected(null)} className="absolute top-4 right-4 text-white/60 hover:text-white">
+        <div
+          className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm grid place-items-center p-4 animate-fade-up"
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="bg-surface rounded-3xl border border-white/10 max-w-lg w-full p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelected(null)}
+              className="absolute top-4 right-4 text-white/60 hover:text-white"
+            >
               <X size={20} />
             </button>
-            <div className="text-xs text-pink-hot font-bold uppercase tracking-widest">Booking Form</div>
+            <div className="text-xs text-pink-hot font-bold uppercase tracking-widest">
+              Booking Form
+            </div>
             <h3 className="text-2xl font-black text-white mt-1">{selectedClass.name}</h3>
-            <p className="text-sm text-white/60">{selectedClass.duration} · {selectedClass.trainer}</p>
+            <p className="text-sm text-white/60">
+              {selectedClass.duration} · {selectedClass.trainer}
+            </p>
 
             <form onSubmit={submit} className="mt-5 space-y-3">
-              <Input label="Full Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
-              <Input label="Phone Number" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} />
+              <Input
+                label="Full Name"
+                value={form.name}
+                onChange={(v) => setForm({ ...form, name: v })}
+              />
+              <Input
+                label="Phone Number"
+                value={form.phone}
+                onChange={(v) => setForm({ ...form, phone: v })}
+              />
               <div className="grid grid-cols-2 gap-3">
-                <Input label="Date" type="date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} />
-                <Input label="Time" type="time" value={form.time} onChange={(v) => setForm({ ...form, time: v })} />
+                <Input
+                  label="Date"
+                  type="date"
+                  value={form.date}
+                  onChange={(v) => setForm({ ...form, date: v })}
+                />
+                <Input
+                  label="Time"
+                  type="time"
+                  value={form.time}
+                  onChange={(v) => setForm({ ...form, time: v })}
+                />
               </div>
-              <Input label="Fitness Goal" value={form.goal} onChange={(v) => setForm({ ...form, goal: v })} />
-              <Input label="Notes" value={form.notes} onChange={(v) => setForm({ ...form, notes: v })} textarea />
+              <Input
+                label="Fitness Goal"
+                value={form.goal}
+                onChange={(v) => setForm({ ...form, goal: v })}
+              />
+              <Input
+                label="Notes"
+                value={form.notes}
+                onChange={(v) => setForm({ ...form, notes: v })}
+                textarea
+              />
               <div className="flex gap-2 pt-2">
-                <button type="submit" className="flex-1 bg-gradient-pink text-white font-semibold py-3 rounded-xl">Submit Booking</button>
+                <button
+                  type="submit"
+                  className="flex-1 bg-gradient-pink text-white font-semibold py-3 rounded-xl"
+                >
+                  Submit Booking
+                </button>
                 <a
                   href={`https://wa.me/962700000000?text=${encodeURIComponent(`Hi! I'd like to book: ${selectedClass.name}. Name: ${form.name || "—"}, Date: ${form.date || "—"}, Time: ${form.time || "—"}`)}`}
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   className="px-4 grid place-items-center rounded-xl bg-[#25D366] text-white"
                 >
                   <MessageCircle size={18} />
@@ -342,8 +547,18 @@ export function Classes() {
   );
 }
 
-function Input({ label, value, onChange, type = "text", textarea = false }: {
-  label: string; value: string; onChange: (v: string) => void; type?: string; textarea?: boolean;
+function Input({
+  label,
+  value,
+  onChange,
+  type = "text",
+  textarea = false,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+  textarea?: boolean;
 }) {
   return (
     <label className="block">
@@ -380,10 +595,20 @@ export function Location() {
             <Info icon={Clock} label="Opening Hours" value={settings.hours} />
             <Info icon={Phone} label="Phone" value={settings.phone} />
             <div className="flex flex-wrap gap-3 pt-4">
-              <a href={settings.mapsLink} target="_blank" rel="noreferrer" className="bg-gradient-pink text-white font-semibold px-5 py-3 rounded-full flex items-center gap-2">
+              <a
+                href={settings.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-gradient-pink text-white font-semibold px-5 py-3 rounded-full flex items-center gap-2"
+              >
                 <MapPin size={16} /> Open in Google Maps
               </a>
-              <a href={`https://wa.me/${settings.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="bg-[#25D366] text-white font-semibold px-5 py-3 rounded-full flex items-center gap-2">
+              <a
+                href={`https://wa.me/${settings.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#25D366] text-white font-semibold px-5 py-3 rounded-full flex items-center gap-2"
+              >
                 <MessageCircle size={16} /> WhatsApp
               </a>
             </div>
@@ -396,7 +621,12 @@ export function Location() {
               <div className="text-sm text-white/60 mt-2 max-w-xs">
                 Google Maps embed will be added here after getting the official embed link.
               </div>
-              <a href={settings.mapsLink} target="_blank" rel="noreferrer" className="inline-block mt-4 text-pink-hot text-sm font-semibold hover:underline">
+              <a
+                href={settings.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block mt-4 text-pink-hot text-sm font-semibold hover:underline"
+              >
                 View on Google Maps →
               </a>
             </div>
@@ -410,7 +640,9 @@ export function Location() {
 function Info({ icon: Icon, label, value }: { icon: typeof MapPin; label: string; value: string }) {
   return (
     <div className="flex gap-4">
-      <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-pink grid place-items-center"><Icon size={18} /></div>
+      <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-pink grid place-items-center">
+        <Icon size={18} />
+      </div>
       <div className="min-w-0">
         <div className="text-xs uppercase tracking-widest text-pink-hot font-bold">{label}</div>
         <div className="text-white mt-1">{value}</div>
@@ -427,28 +659,38 @@ export function Offers() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader eyebrow="Special" title="Latest Offers" />
         <div className="grid md:grid-cols-3 gap-5 mt-12">
-          {offers.filter((o) => o.active).map((o) => (
-            <div key={o.id} className="glass rounded-3xl overflow-hidden group hover:border-pink-hot/40 transition">
-              <div className="aspect-[16/10] overflow-hidden relative">
-                <img src={o.image} alt={o.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute top-3 left-3 glass-pink px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                  Limited
+          {offers
+            .filter((o) => o.active)
+            .map((o) => (
+              <div
+                key={o.id}
+                className="glass rounded-3xl overflow-hidden group hover:border-pink-hot/40 transition"
+              >
+                <div className="aspect-[16/10] overflow-hidden relative">
+                  <img
+                    src={o.image}
+                    alt={o.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 left-3 glass-pink px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                    Limited
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="font-bold text-white text-lg">{o.title}</div>
+                  <p className="text-sm text-white/60 mt-2">{o.description}</p>
+                  <div className="text-xs text-white/50 mt-3">Valid until: {o.validUntil}</div>
+                  <a
+                    href={`https://wa.me/962700000000?text=${encodeURIComponent("Hi! I'd like to ask about the offer: " + o.title)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 w-full flex items-center justify-center gap-2 bg-gradient-pink text-white text-sm font-semibold py-2.5 rounded-xl"
+                  >
+                    Ask About This Offer
+                  </a>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="font-bold text-white text-lg">{o.title}</div>
-                <p className="text-sm text-white/60 mt-2">{o.description}</p>
-                <div className="text-xs text-white/50 mt-3">Valid until: {o.validUntil}</div>
-                <a
-                  href={`https://wa.me/962700000000?text=${encodeURIComponent("Hi! I'd like to ask about the offer: " + o.title)}`}
-                  target="_blank" rel="noreferrer"
-                  className="mt-4 w-full flex items-center justify-center gap-2 bg-gradient-pink text-white text-sm font-semibold py-2.5 rounded-xl"
-                >
-                  Ask About This Offer
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
@@ -459,9 +701,15 @@ export function Offers() {
 export function AIAssistant() {
   const messages = [
     { role: "user", text: "What membership is best for me?" },
-    { role: "ai", text: "I can help! Could you share your main goal — strength, weight loss, or general fitness?" },
+    {
+      role: "ai",
+      text: "I can help! Could you share your main goal — strength, weight loss, or general fitness?",
+    },
     { role: "user", text: "I'd like weight loss." },
-    { role: "ai", text: "Our Weight Loss Program (8 weeks) plus 2 weekly Zumba classes is a popular start. Want me to check availability?" },
+    {
+      role: "ai",
+      text: "Our Weight Loss Program (8 weeks) plus 2 weekly Zumba classes is a popular start. Want me to check availability?",
+    },
   ];
   return (
     <section className="py-24 relative overflow-hidden">
@@ -508,16 +756,34 @@ export function AIAssistant() {
           </div>
           <div className="space-y-3 py-4 max-h-[300px] overflow-y-auto">
             {messages.map((m, i) => (
-              <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[80%] text-sm px-4 py-2.5 rounded-2xl ${
-                  m.role === "user" ? "bg-gradient-pink text-white rounded-br-sm" : "bg-surface-2 text-white/90 rounded-bl-sm"
-                }`}>{m.text}</div>
+              <div
+                key={i}
+                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  className={`max-w-[80%] text-sm px-4 py-2.5 rounded-2xl ${
+                    m.role === "user"
+                      ? "bg-gradient-pink text-white rounded-br-sm"
+                      : "bg-surface-2 text-white/90 rounded-bl-sm"
+                  }`}
+                >
+                  {m.text}
+                </div>
               </div>
             ))}
           </div>
           <div className="flex gap-2 pt-3 border-t border-white/10">
-            <input disabled placeholder="Ask me anything..." className="flex-1 bg-surface-2 rounded-xl px-3 py-2.5 text-sm text-white/60 border border-white/5" />
-            <button disabled className="h-10 w-10 grid place-items-center rounded-xl bg-gradient-pink"><Send size={16} /></button>
+            <input
+              disabled
+              placeholder="Ask me anything..."
+              className="flex-1 bg-surface-2 rounded-xl px-3 py-2.5 text-sm text-white/60 border border-white/5"
+            />
+            <button
+              disabled
+              className="h-10 w-10 grid place-items-center rounded-xl bg-gradient-pink"
+            >
+              <Send size={16} />
+            </button>
           </div>
         </div>
       </div>
@@ -543,26 +809,48 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-8 mt-12">
           <div className="space-y-4">
-            <a href={`https://wa.me/${settings.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noreferrer" className="flex items-center gap-4 glass rounded-2xl p-5 hover:border-[#25D366]/50 transition">
-              <div className="h-12 w-12 grid place-items-center rounded-xl bg-[#25D366]"><MessageCircle /></div>
+            <a
+              href={`https://wa.me/${settings.whatsapp.replace(/\D/g, "")}`}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-4 glass rounded-2xl p-5 hover:border-[#25D366]/50 transition"
+            >
+              <div className="h-12 w-12 grid place-items-center rounded-xl bg-[#25D366]">
+                <MessageCircle />
+              </div>
               <div>
                 <div className="text-xs text-white/50">WhatsApp</div>
                 <div className="font-bold text-white">Chat with us</div>
               </div>
             </a>
-            <a href={`tel:${settings.phone}`} className="flex items-center gap-4 glass rounded-2xl p-5 hover:border-pink-hot/50 transition">
-              <div className="h-12 w-12 grid place-items-center rounded-xl bg-gradient-pink"><Phone /></div>
+            <a
+              href={`tel:${settings.phone}`}
+              className="flex items-center gap-4 glass rounded-2xl p-5 hover:border-pink-hot/50 transition"
+            >
+              <div className="h-12 w-12 grid place-items-center rounded-xl bg-gradient-pink">
+                <Phone />
+              </div>
               <div>
                 <div className="text-xs text-white/50">Phone</div>
                 <div className="font-bold text-white">{settings.phone}</div>
               </div>
             </a>
             <div className="grid grid-cols-2 gap-4">
-              <a href={settings.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition">
+              <a
+                href={settings.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition"
+              >
                 <Instagram className="text-pink-hot" />
                 <div className="font-bold text-white text-sm">Instagram</div>
               </a>
-              <a href={settings.facebook} target="_blank" rel="noreferrer" className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition">
+              <a
+                href={settings.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition"
+              >
                 <Facebook className="text-pink-hot" />
                 <div className="font-bold text-white text-sm">Facebook</div>
               </a>
@@ -571,9 +859,20 @@ export function Contact() {
 
           <form onSubmit={submit} className="glass rounded-3xl p-7 space-y-3">
             <Input label="Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} />
-            <Input label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} />
-            <Input label="Message" value={form.message} onChange={(v) => setForm({ ...form, message: v })} textarea />
-            <button className="w-full bg-gradient-pink text-white font-semibold py-3 rounded-xl mt-2">Send Message</button>
+            <Input
+              label="Phone"
+              value={form.phone}
+              onChange={(v) => setForm({ ...form, phone: v })}
+            />
+            <Input
+              label="Message"
+              value={form.message}
+              onChange={(v) => setForm({ ...form, message: v })}
+              textarea
+            />
+            <button className="w-full bg-gradient-pink text-white font-semibold py-3 rounded-xl mt-2">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
@@ -585,7 +884,9 @@ export function Contact() {
 export function SectionHeader({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div className="text-center">
-      <div className="inline-block text-xs uppercase tracking-[0.3em] text-pink-hot font-bold">{eyebrow}</div>
+      <div className="inline-block text-xs uppercase tracking-[0.3em] text-pink-hot font-bold">
+        {eyebrow}
+      </div>
       <h2 className="text-4xl md:text-5xl font-black mt-3">{title}</h2>
       <div className="mx-auto mt-4 h-1 w-16 bg-gradient-pink rounded-full" />
     </div>
