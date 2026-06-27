@@ -7,6 +7,7 @@ import { useI18n } from "@/lib/i18n";
 const linkKeys = [
   ["home", "#home"],
   ["about", "#about"],
+  ["memberships", "#memberships"],
   ["gallery", "#gallery"],
   ["menu", "#menu"],
   ["schedule", "#schedule"],

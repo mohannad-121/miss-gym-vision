@@ -7,6 +7,7 @@ const dictionary = {
     nav: {
       home: "Home",
       about: "About",
+      memberships: "Subscriptions",
       gallery: "Gallery",
       menu: "Menu",
       schedule: "Schedule",
@@ -72,6 +73,19 @@ const dictionary = {
           "Goal-Based Programs",
           "Classes and plans for strength, weight loss, mobility, and wellness.",
         ],
+      ],
+    },
+    memberships: {
+      eyebrow: "Subscriptions",
+      title: "Choose your Miss Gym membership",
+      note: "Membership prices from the official Miss Gym subscription post.",
+      cta: "Subscribe on WhatsApp",
+      bestValue: "Best value",
+      plans: [
+        { period: "1 Month", price: "25 JOD", highlight: false },
+        { period: "3 Months", price: "60 JOD", highlight: true },
+        { period: "6 Months", price: "110 JOD", highlight: false },
+        { period: "12 Months", price: "205 JOD", highlight: false },
       ],
     },
     gallery: {
@@ -154,6 +168,7 @@ const dictionary = {
     nav: {
       home: "الرئيسية",
       about: "عن النادي",
+      memberships: "الاشتراكات",
       gallery: "الصور",
       menu: "المنيو",
       schedule: "الجدول",
@@ -207,6 +222,19 @@ const dictionary = {
         ["بيئة داعمة", "مساحة نسائية بخصوصية وطاقة إيجابية."],
         ["تدريب محترف", "حصص بإشراف مدربات تناسب كل المستويات."],
         ["برامج حسب الهدف", "حصص وخطط للقوة، خسارة الوزن، المرونة، والصحة."],
+      ],
+    },
+    memberships: {
+      eyebrow: "الاشتراكات",
+      title: "اختاري اشتراكك في Miss Gym",
+      note: "أسعار الاشتراكات حسب منشور Miss Gym الرسمي.",
+      cta: "اشتركي عبر واتساب",
+      bestValue: "الأفضل قيمة",
+      plans: [
+        { period: "شهر", price: "25 دينار", highlight: false },
+        { period: "3 أشهر", price: "60 دينار", highlight: true },
+        { period: "6 أشهر", price: "110 دينار", highlight: false },
+        { period: "12 شهر", price: "205 دينار", highlight: false },
       ],
     },
     gallery: {

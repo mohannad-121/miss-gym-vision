@@ -6,6 +6,7 @@ import { WhatsAppFloat, DemoBadge } from "@/components/Floating";
 import {
   Hero,
   About,
+  Memberships,
   Gallery,
   Menu,
   Schedule,
@@ -53,6 +54,7 @@ function Page() {
       <main>
         <Hero />
         <About />
+        <Memberships />
         <Gallery />
         <Menu />
         <Schedule />

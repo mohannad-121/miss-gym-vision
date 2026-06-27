@@ -23,6 +23,7 @@ import {
   Martini,
   Sandwich,
   ExternalLink,
+  BadgeDollarSign,
 } from "lucide-react";
 import { Logo } from "./Logo";
 import { useI18n } from "@/lib/i18n";
@@ -205,6 +206,68 @@ export function About() {
               );
             })}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------------------- MEMBERSHIPS ------------------------------- */
+export function Memberships() {
+  const { t, dir } = useI18n();
+
+  return (
+    <section id="memberships" className="relative overflow-hidden bg-[#0c0c0e] py-24">
+      <div className="absolute inset-0 -z-10 luxury-grid" />
+      <div className="mx-auto max-w-7xl px-6">
+        <SectionHeader eyebrow={t.memberships.eyebrow} title={t.memberships.title} />
+        <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-7 text-white/62">
+          {t.memberships.note}
+        </p>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {t.memberships.plans.map((plan) => (
+            <div
+              key={plan.period}
+              className={cx(
+                "relative overflow-hidden rounded-[1.75rem] p-6 transition hover:-translate-y-1",
+                plan.highlight ? "glass-pink glow-pink" : "glass",
+              )}
+            >
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-pink" />
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-pink text-white shadow-card">
+                  <BadgeDollarSign size={22} />
+                </div>
+                {plan.highlight && (
+                  <span className="rounded-full border border-pink-hot/40 bg-pink-hot/15 px-3 py-1 text-xs font-bold text-pink-soft">
+                    {t.memberships.bestValue}
+                  </span>
+                )}
+              </div>
+              <div
+                className={cx("text-sm font-semibold text-white/60", dir === "rtl" && "text-right")}
+              >
+                {plan.period}
+              </div>
+              <div
+                className={cx(
+                  "mt-3 font-display text-4xl font-black text-white",
+                  dir === "rtl" && "text-right",
+                )}
+              >
+                {plan.price}
+              </div>
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hi! I want to subscribe to Miss Gym: ${plan.period} - ${plan.price}`)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-7 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-pink py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
+              >
+                <MessageCircle size={16} /> {t.memberships.cta}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
