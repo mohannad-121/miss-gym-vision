@@ -62,6 +62,36 @@ const uid = () => Math.random().toString(36).slice(2, 10);
 const img = (q: string, n = 1) =>
   `https://images.unsplash.com/photo-${q}?auto=format&fit=crop&w=1200&q=80&sig=${n}`;
 
+const PRODUCT_IMAGES = {
+  wheyShake:
+    "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=900&q=80",
+  icedCoffee:
+    "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80",
+  hotCoffee:
+    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+  proteinBar:
+    "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+  mineralWater:
+    "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=80",
+  snackBox:
+    "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80",
+  supplements:
+    "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=900&q=80",
+} as const;
+
+const WOMEN_FITNESS_IMAGES = {
+  studio:
+    "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80",
+  strength:
+    "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80",
+  training:
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80",
+  dance:
+    "https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1200&q=80",
+  nutrition:
+    "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80",
+} as const;
+
 export const defaultSettings: Settings = {
   gymName: "Miss Gym Fitness",
   phone: "+962 79 257 0090",
@@ -79,8 +109,7 @@ export const defaultProducts: Product[] = [
     name: "Whey Protein Shake",
     category: "Protein",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1622818425825-aacd2c7e4f2a?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.wheyShake,
     available: true,
     description: "Chocolate, vanilla & strawberry",
   },
@@ -89,8 +118,7 @@ export const defaultProducts: Product[] = [
     name: "Iced Coffee",
     category: "Drinks",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.icedCoffee,
     available: true,
     description: "Cold brew with oat milk",
   },
@@ -99,8 +127,7 @@ export const defaultProducts: Product[] = [
     name: "Hot Coffee",
     category: "Drinks",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.hotCoffee,
     available: true,
     description: "Freshly brewed espresso",
   },
@@ -109,8 +136,7 @@ export const defaultProducts: Product[] = [
     name: "Protein Bar",
     category: "Protein",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1622484212385-1d4caa4b8c6e?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.proteinBar,
     available: true,
     description: "20g protein, low sugar",
   },
@@ -119,8 +145,7 @@ export const defaultProducts: Product[] = [
     name: "Mineral Water",
     category: "Drinks",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.mineralWater,
     available: true,
     description: "500ml bottle",
   },
@@ -129,8 +154,7 @@ export const defaultProducts: Product[] = [
     name: "Healthy Snack Box",
     category: "Snacks",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.snackBox,
     available: false,
     description: "Mixed nuts & dried fruit",
   },
@@ -139,8 +163,7 @@ export const defaultProducts: Product[] = [
     name: "BCAA Supplement",
     category: "Supplements",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.supplements,
     available: true,
     description: "Recovery & endurance",
   },
@@ -149,8 +172,7 @@ export const defaultProducts: Product[] = [
     name: "Pre-Workout",
     category: "Supplements",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1579722821273-0f6c1b5d0c4b?auto=format&fit=crop&w=900&q=80",
+    image: PRODUCT_IMAGES.supplements,
     available: true,
     description: "Clean energy boost",
   },
@@ -161,64 +183,56 @@ export const defaultGallery: GalleryItem[] = [
     id: uid(),
     title: "Main Training Floor",
     category: "Gym Place",
-    image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.studio,
     description: "Spacious, bright, women-only space",
   },
   {
     id: uid(),
     title: "Cardio Zone",
     category: "Equipment",
-    image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.training,
     description: "Modern treadmills & bikes",
   },
   {
     id: uid(),
     title: "Strength Area",
     category: "Equipment",
-    image:
-      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.strength,
     description: "Free weights & racks",
   },
   {
     id: uid(),
     title: "Zumba Class",
     category: "Classes",
-    image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.studio,
     description: "High-energy group sessions",
   },
   {
     id: uid(),
     title: "Dance Studio",
     category: "Classes",
-    image:
-      "https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.dance,
     description: "Mirrored studio with sound system",
   },
   {
     id: uid(),
     title: "Protein Bar Counter",
     category: "Protein Bar",
-    image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80",
+    image: PRODUCT_IMAGES.icedCoffee,
     description: "Smoothies, shakes & snacks",
   },
   {
     id: uid(),
     title: "Functional Zone",
     category: "Equipment",
-    image:
-      "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.training,
     description: "Kettlebells & TRX",
   },
   {
     id: uid(),
     title: "Lounge Area",
     category: "Gym Place",
-    image:
-      "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.studio,
     description: "Relax between sessions",
   },
 ];
@@ -230,8 +244,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "60 min",
     trainer: "Coach Lana",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.training,
     available: true,
     description: "One-on-one tailored workout",
   },
@@ -241,8 +254,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "45 min",
     trainer: "Coach Mira",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1508973379184-7517410fb0bc?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.dance,
     available: true,
     description: "Fun, expressive choreography",
   },
@@ -252,8 +264,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "50 min",
     trainer: "Coach Sara",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.studio,
     available: true,
     description: "Latin-inspired cardio party",
   },
@@ -263,8 +274,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "60 min",
     trainer: "Coach Dina",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.training,
     available: true,
     description: "Personalized coaching plan",
   },
@@ -274,8 +284,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "60 min",
     trainer: "Coach Rama",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.strength,
     available: true,
     description: "Build lean muscle safely",
   },
@@ -285,8 +294,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "8 weeks",
     trainer: "Coach Lana",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.studio,
     available: true,
     description: "Structured progressive program",
   },
@@ -296,8 +304,7 @@ export const defaultClasses: ClassItem[] = [
     duration: "45 min",
     trainer: "Coach Dina",
     price: "Ask for price",
-    image:
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.nutrition,
     available: true,
     description: "Custom nutrition plan",
   },
@@ -308,8 +315,7 @@ export const defaultOffers: Offer[] = [
     id: uid(),
     title: "Monthly Membership Offer",
     description: "Full access to gym, classes, and protein bar perks.",
-    image:
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.strength,
     validUntil: "End of month",
     active: true,
   },
@@ -317,8 +323,7 @@ export const defaultOffers: Offer[] = [
     id: uid(),
     title: "Private Class Package",
     description: "5 private sessions with personalized coaching.",
-    image:
-      "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=1200&q=80",
+    image: WOMEN_FITNESS_IMAGES.training,
     validUntil: "Limited time",
     active: true,
   },
@@ -326,19 +331,67 @@ export const defaultOffers: Offer[] = [
     id: uid(),
     title: "Protein Bar Combo",
     description: "Shake + protein bar + water bundle.",
-    image:
-      "https://images.unsplash.com/photo-1622818425825-aacd2c7e4f2a?auto=format&fit=crop&w=1200&q=80",
+    image: PRODUCT_IMAGES.wheyShake,
     validUntil: "While supplies last",
     active: true,
   },
 ];
 
-function useLocal<T>(key: string, initial: T) {
+const productImagesByName: Record<string, string> = {
+  "Whey Protein Shake": PRODUCT_IMAGES.wheyShake,
+  "Iced Coffee": PRODUCT_IMAGES.icedCoffee,
+  "Hot Coffee": PRODUCT_IMAGES.hotCoffee,
+  "Protein Bar": PRODUCT_IMAGES.proteinBar,
+  "Mineral Water": PRODUCT_IMAGES.mineralWater,
+  "Healthy Snack Box": PRODUCT_IMAGES.snackBox,
+  "BCAA Supplement": PRODUCT_IMAGES.supplements,
+  "Pre-Workout": PRODUCT_IMAGES.supplements,
+};
+
+const galleryImagesByTitle: Record<string, string> = {
+  "Main Training Floor": WOMEN_FITNESS_IMAGES.studio,
+  "Cardio Zone": WOMEN_FITNESS_IMAGES.training,
+  "Strength Area": WOMEN_FITNESS_IMAGES.strength,
+  "Zumba Class": WOMEN_FITNESS_IMAGES.studio,
+  "Dance Studio": WOMEN_FITNESS_IMAGES.dance,
+  "Protein Bar Counter": PRODUCT_IMAGES.icedCoffee,
+  "Functional Zone": WOMEN_FITNESS_IMAGES.training,
+  "Lounge Area": WOMEN_FITNESS_IMAGES.studio,
+};
+
+const classImagesByName: Record<string, string> = {
+  "Private Fitness Session": WOMEN_FITNESS_IMAGES.training,
+  "Dance Class": WOMEN_FITNESS_IMAGES.dance,
+  "Zumba Class": WOMEN_FITNESS_IMAGES.studio,
+  "Personal Training": WOMEN_FITNESS_IMAGES.training,
+  "Strength Training": WOMEN_FITNESS_IMAGES.strength,
+  "Weight Loss Program": WOMEN_FITNESS_IMAGES.studio,
+  "Nutrition Guidance": WOMEN_FITNESS_IMAGES.nutrition,
+};
+
+const offerImagesByTitle: Record<string, string> = {
+  "Monthly Membership Offer": WOMEN_FITNESS_IMAGES.strength,
+  "Private Class Package": WOMEN_FITNESS_IMAGES.training,
+  "Protein Bar Combo": PRODUCT_IMAGES.wheyShake,
+};
+
+const replaceImages = <T extends { image: string }>(
+  items: T[],
+  byKey: Record<string, string>,
+  getKey: (item: T) => string,
+) =>
+  items.map((item) => ({
+    ...item,
+    image: byKey[getKey(item)] ?? item.image,
+  }));
+
+function useLocal<T>(key: string, initial: T, normalize?: (value: T) => T) {
   const [val, setVal] = useState<T>(() => {
     if (typeof window === "undefined") return initial;
     try {
       const raw = localStorage.getItem(key);
-      return raw ? (JSON.parse(raw) as T) : initial;
+      const value = raw ? (JSON.parse(raw) as T) : initial;
+      return normalize ? normalize(value) : value;
     } catch (error) {
       console.warn("Could not read local storage", error);
       return initial;
@@ -354,11 +407,23 @@ function useLocal<T>(key: string, initial: T) {
   return [val, setVal] as const;
 }
 
-export const useProducts = () => useLocal("mg_products", defaultProducts);
-export const useGallery = () => useLocal("mg_gallery", defaultGallery);
-export const useClasses = () => useLocal("mg_classes", defaultClasses);
+export const useProducts = () =>
+  useLocal("mg_products", defaultProducts, (items) =>
+    replaceImages(items, productImagesByName, (item) => item.name),
+  );
+export const useGallery = () =>
+  useLocal("mg_gallery", defaultGallery, (items) =>
+    replaceImages(items, galleryImagesByTitle, (item) => item.title),
+  );
+export const useClasses = () =>
+  useLocal("mg_classes", defaultClasses, (items) =>
+    replaceImages(items, classImagesByName, (item) => item.name),
+  );
 export const useBookings = () => useLocal<Booking[]>("mg_bookings", []);
-export const useOffers = () => useLocal("mg_offers", defaultOffers);
+export const useOffers = () =>
+  useLocal("mg_offers", defaultOffers, (items) =>
+    replaceImages(items, offerImagesByTitle, (item) => item.title),
+  );
 export const useSettings = () => useLocal("mg_settings", defaultSettings);
 
 export const newId = uid;
