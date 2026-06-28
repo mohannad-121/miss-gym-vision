@@ -34,8 +34,9 @@ import {
 } from "@/lib/mockData";
 
 const whatsappNumber = "962792570090";
-const displayPhone = "+962 79 257 0090";
-const cleanPhone = (phone: string) => (phone.includes("XXX") ? displayPhone : phone);
+const displayPhone = "+962792570090";
+const cleanPhone = (phone: string) =>
+  phone.includes("XXX") ? displayPhone : phone.replace(/\s/g, "");
 
 /* ------------------------------- HERO ------------------------------- */
 export function Hero() {
@@ -754,6 +755,8 @@ export function Location() {
               icon={Phone}
               label={text("Phone", "\u0627\u0644\u0647\u0627\u062a\u0641")}
               value={phone}
+              valueDir="ltr"
+              valueClassName="font-mono tracking-wide text-left"
             />
             <div className="flex flex-wrap gap-3 pt-4">
               <a
@@ -774,21 +777,33 @@ export function Location() {
               </a>
             </div>
           </div>
-          <div className="rounded-3xl overflow-hidden glass aspect-[4/3] lg:aspect-auto grid place-items-center text-center p-8 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-hot/10 to-transparent" />
-            <div className="relative">
-              <MapPin size={48} className="text-pink-hot mx-auto mb-4" />
-              <div className="text-white font-bold">Google Maps Embed</div>
-              <div className="text-sm text-white/60 mt-2 max-w-xs">
-                Google Maps embed will be added here after getting the official embed link.
+          <div className="rounded-3xl overflow-hidden glass aspect-[4/3] lg:aspect-auto relative group">
+            <img
+              src="/assets/miss-gym-location-map.svg"
+              alt={text(
+                "Miss Gym location map",
+                "\u062e\u0631\u064a\u0637\u0629 \u0645\u0648\u0642\u0639 Miss Gym",
+              )}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-center justify-between gap-3">
+              <div className="glass rounded-2xl px-4 py-3">
+                <div className="text-white font-bold">Miss Gym</div>
+                <div className="text-xs text-white/65 mt-1">{settings.address}</div>
               </div>
               <a
                 href={settings.mapsLink}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-block mt-4 text-pink-hot text-sm font-semibold hover:underline"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-pink px-4 py-2.5 text-sm font-bold text-white shadow-[0_12px_35px_rgba(236,72,153,0.32)]"
               >
-                View on Google Maps
+                <MapPin size={15} />
+                {text(
+                  "View on Google Maps",
+                  "\u0627\u0641\u062a\u062d\u064a \u0627\u0644\u062e\u0631\u064a\u0637\u0629",
+                )}
               </a>
             </div>
           </div>
@@ -798,7 +813,19 @@ export function Location() {
   );
 }
 
-function Info({ icon: Icon, label, value }: { icon: typeof MapPin; label: string; value: string }) {
+function Info({
+  icon: Icon,
+  label,
+  value,
+  valueDir,
+  valueClassName = "",
+}: {
+  icon: typeof MapPin;
+  label: string;
+  value: string;
+  valueDir?: "ltr" | "rtl" | "auto";
+  valueClassName?: string;
+}) {
   return (
     <div className="flex gap-4">
       <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-pink grid place-items-center">
@@ -806,7 +833,9 @@ function Info({ icon: Icon, label, value }: { icon: typeof MapPin; label: string
       </div>
       <div className="min-w-0">
         <div className="text-xs uppercase tracking-widest text-pink-hot font-bold">{label}</div>
-        <div className="text-white mt-1">{value}</div>
+        <div dir={valueDir} className={`text-white mt-1 ${valueClassName}`}>
+          {value}
+        </div>
       </div>
     </div>
   );
@@ -1134,7 +1163,9 @@ export function Contact() {
                 <div className="text-xs text-white/50">
                   {text("Phone", "\u0627\u0644\u0647\u0627\u062a\u0641")}
                 </div>
-                <div className="font-bold text-white">{phone}</div>
+                <div dir="ltr" className="font-mono font-bold text-white text-left">
+                  {phone}
+                </div>
               </div>
             </a>
             <div className="grid grid-cols-2 gap-4">

@@ -94,12 +94,12 @@ const WOMEN_FITNESS_IMAGES = {
 
 export const defaultSettings: Settings = {
   gymName: "Miss Gym Fitness",
-  phone: "+962 79 257 0090",
+  phone: "+962792570090",
   whatsapp: "+962792570090",
   instagram: "https://www.instagram.com/missgymjo/",
   facebook: "https://facebook.com/missgym",
   mapsLink: "https://maps.app.goo.gl/FdX8UUSwYnJjog3z9",
-  address: "Jordan - Miss Gym Fitness",
+  address: "الاوتوستراد مقابل بوظة المنال فوق حلويات الصديق, Zarqa",
   hours: "Daily: 8:00 AM - 9:00 PM",
 };
 
@@ -424,7 +424,14 @@ export const useOffers = () =>
   useLocal("mg_offers", defaultOffers, (items) =>
     replaceImages(items, offerImagesByTitle, (item) => item.title),
   );
-export const useSettings = () => useLocal("mg_settings", defaultSettings);
+export const useSettings = () =>
+  useLocal("mg_settings", defaultSettings, (settings) => ({
+    ...settings,
+    phone: defaultSettings.phone,
+    whatsapp: defaultSettings.whatsapp,
+    address: defaultSettings.address,
+    hours: defaultSettings.hours,
+  }));
 
 export const newId = uid;
 export { img };
