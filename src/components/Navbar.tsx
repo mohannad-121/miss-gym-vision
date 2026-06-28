@@ -1,20 +1,22 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, LayoutDashboard } from "lucide-react";
+import { Menu, X, LayoutDashboard, Languages } from "lucide-react";
 import { Logo } from "./Logo";
+import { useLanguage } from "@/lib/language";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Subscriptions", href: "#subscriptions" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Menu", href: "#menu" },
-  { label: "Classes", href: "#classes" },
-  { label: "Location", href: "#location" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", ar: "الرئيسية", href: "#home" },
+  { label: "About", ar: "عن النادي", href: "#about" },
+  { label: "Subscriptions", ar: "الاشتراكات", href: "#subscriptions" },
+  { label: "Gallery", ar: "الصور", href: "#gallery" },
+  { label: "Menu", ar: "المنيو", href: "#menu" },
+  { label: "Classes", ar: "الحصص", href: "#classes" },
+  { label: "Location", ar: "الموقع", href: "#location" },
+  { label: "Contact", ar: "تواصل", href: "#contact" },
 ];
 
 export function Navbar() {
+  const { text, toggleLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -43,23 +45,29 @@ export function Navbar() {
               href={l.href}
               className="text-sm text-white/80 hover:text-white transition-colors font-medium relative after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-0 after:bg-gradient-pink after:transition-all hover:after:w-full"
             >
-              {l.label}
+              {text(l.label, l.ar)}
             </a>
           ))}
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 text-sm text-white/70 hover:text-white px-3 py-2 rounded-full border border-white/15 hover:border-pink-hot/50 transition"
+          >
+            <Languages size={16} /> {text("العربية", "English")}
+          </button>
           <Link
             to="/admin"
             className="flex items-center gap-2 text-sm text-white/70 hover:text-white px-3 py-2 rounded-full border border-white/15 hover:border-pink-hot/50 transition"
           >
-            <LayoutDashboard size={16} /> Admin
+            <LayoutDashboard size={16} /> {text("Admin", "الإدارة")}
           </Link>
           <a
             href="#classes"
             className="bg-gradient-pink text-white font-semibold text-sm px-5 py-2.5 rounded-full glow-pink hover:scale-105 transition-transform"
           >
-            Book Now
+            {text("Book Now", "احجزي الآن")}
           </a>
         </div>
 
@@ -81,22 +89,25 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className="block text-white/80 hover:text-white py-1"
             >
-              {l.label}
+              {text(l.label, l.ar)}
             </a>
           ))}
+          <button onClick={toggleLanguage} className="flex items-center gap-2 text-white/80 py-1">
+            <Languages size={16} /> {text("العربية", "English")}
+          </button>
           <Link
             to="/admin"
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 text-white/80 py-1"
           >
-            <LayoutDashboard size={16} /> Admin Preview
+            <LayoutDashboard size={16} /> {text("Admin Preview", "معاينة الإدارة")}
           </Link>
           <a
             href="#classes"
             onClick={() => setOpen(false)}
             className="block text-center bg-gradient-pink text-white font-semibold px-5 py-3 rounded-full"
           >
-            Book Now
+            {text("Book Now", "احجزي الآن")}
           </a>
         </div>
       )}

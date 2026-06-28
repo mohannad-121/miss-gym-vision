@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 
-export function WhatsAppFloat({ phone = "962700000000" }: { phone?: string }) {
+export function WhatsAppFloat({ phone = "962792570090" }: { phone?: string }) {
   const number = phone.replace(/\D/g, "");
   return (
     <a
