@@ -52,16 +52,26 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-7 animate-fade-up">
           <div className="inline-flex items-center gap-2 glass-pink px-4 py-1.5 rounded-full text-xs text-pink-soft font-semibold">
-            <Sparkles size={14} /> {text("Women-Focused Fitness in Jordan", "???? ????? ?? ??????")}
+            <Sparkles size={14} />{" "}
+            {text(
+              "Women-Focused Fitness in Jordan",
+              "\u0646\u0627\u062f\u064a \u0646\u0633\u0627\u0626\u064a \u0641\u064a \u0627\u0644\u0623\u0631\u062f\u0646",
+            )}
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05]">
-            {text("Train Strong.", "????? ????.")} <br />
-            <span className="text-gradient-pink">{text("Feel Confident.", "?????? ??????.")}</span>
+            {text("Train Strong.", "\u062a\u0645\u0631\u0646\u064a \u0628\u0642\u0648\u0629.")}{" "}
+            <br />
+            <span className="text-gradient-pink">
+              {text(
+                "Feel Confident.",
+                "\u0648\u0627\u0634\u0639\u0631\u064a \u0628\u0627\u0644\u062b\u0642\u0629.",
+              )}
+            </span>
           </h1>
           <p className="text-lg text-white/70 max-w-xl">
             {text(
               "Miss Gym Fitness is a women-focused fitness space in Jordan designed to help you build strength, confidence, and a healthier lifestyle.",
-              "Miss Gym Fitness ????? ?????? ?? ?????? ?????? ??? ???? ????? ?????? ???? ???? ???.",
+              "Miss Gym Fitness \u0645\u0633\u0627\u062d\u0629 \u0646\u0633\u0627\u0626\u064a\u0629 \u0641\u064a \u0627\u0644\u0623\u0631\u062f\u0646 \u062a\u0633\u0627\u0639\u062f\u0643 \u0639\u0644\u0649 \u0628\u0646\u0627\u0621 \u0627\u0644\u0642\u0648\u0629 \u0648\u0627\u0644\u062b\u0642\u0629 \u0648\u0646\u0645\u0637 \u062d\u064a\u0627\u0629 \u0635\u062d\u064a.",
             )}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -69,14 +79,20 @@ export function Hero() {
               href="#classes"
               className="bg-gradient-pink text-white font-semibold px-6 py-3.5 rounded-full glow-pink hover:scale-105 transition flex items-center gap-2"
             >
-              {text("Book a Private Class", "????? ??? ????")}{" "}
+              {text(
+                "Book a Private Class",
+                "\u0627\u062d\u062c\u0632\u064a \u062d\u0635\u0629 \u062e\u0627\u0635\u0629",
+              )}{" "}
               <ChevronRight size={18} className={isArabic ? "rotate-180" : ""} />
             </a>
             <a
               href="#menu"
               className="glass text-white font-semibold px-6 py-3.5 rounded-full hover:border-pink-hot/50 transition"
             >
-              {text("View Products Menu", "????? ???? ????????")}
+              {text(
+                "View Products Menu",
+                "\u0634\u0627\u0647\u062f\u064a \u0645\u0646\u064a\u0648 \u0627\u0644\u0645\u0646\u062a\u062c\u0627\u062a",
+              )}
             </a>
             <a
               href="https://maps.app.goo.gl/FdX8UUSwYnJjog3z9"
@@ -84,15 +100,37 @@ export function Hero() {
               rel="noreferrer"
               className="text-white font-semibold px-6 py-3.5 rounded-full border border-white/15 hover:border-pink-hot/50 transition flex items-center gap-2"
             >
-              <MapPin size={18} /> {text("Open Location", "????? ??????")}
+              <MapPin size={18} />{" "}
+              {text(
+                "Open Location",
+                "\u0627\u0641\u062a\u062d\u064a \u0627\u0644\u0645\u0648\u0642\u0639",
+              )}
             </a>
           </div>
 
           <div className="flex gap-6 pt-4">
             {[
-              { n: "500+", l: text("Happy Members", "?????? ?????") },
-              { n: "20+", l: text("Weekly Classes", "??? ???????") },
-              { n: "10+", l: text("Expert Coaches", "?????? ???????") },
+              {
+                n: "500+",
+                l: text(
+                  "Happy Members",
+                  "\u0645\u0634\u062a\u0631\u0643\u0629 \u0633\u0639\u064a\u062f\u0629",
+                ),
+              },
+              {
+                n: "20+",
+                l: text(
+                  "Weekly Classes",
+                  "\u062d\u0635\u0629 \u0623\u0633\u0628\u0648\u0639\u064a\u0629",
+                ),
+              },
+              {
+                n: "10+",
+                l: text(
+                  "Expert Coaches",
+                  "\u0645\u062f\u0631\u0628\u0627\u062a \u0645\u062d\u062a\u0631\u0641\u0627\u062a",
+                ),
+              },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-3xl font-black text-gradient-pink">{s.n}</div>
@@ -115,9 +153,17 @@ export function Hero() {
               <div className="glass rounded-2xl p-4 flex items-center gap-3">
                 <Logo size="sm" />
                 <div className="ml-auto text-right">
-                  <div className="text-xs text-white/60">{text("Open Today", "????? ?????")}</div>
+                  <div className="text-xs text-white/60">
+                    {text(
+                      "Open Today",
+                      "\u0645\u0641\u062a\u0648\u062d \u0627\u0644\u064a\u0648\u0645",
+                    )}
+                  </div>
                   <div className="text-sm font-semibold text-white">
-                    {text("8 AM - 9 PM", "8 ????? - 9 ????")}
+                    {text(
+                      "8 AM - 9 PM",
+                      "8 \u0635\u0628\u0627\u062d\u0627 - 9 \u0645\u0633\u0627\u0621",
+                    )}
                   </div>
                 </div>
               </div>
@@ -126,31 +172,31 @@ export function Hero() {
 
           {/* Floating chips */}
           <div className="absolute -top-2 -left-4 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float">
-            ðŸ’ª Women-focused gym
+            {text("Women-focused gym", "\u0646\u0627\u062f\u064a \u0646\u0633\u0627\u0626\u064a")}
           </div>
           <div
             className="absolute top-20 -right-4 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
             style={{ animationDelay: "1s" }}
           >
-            ðŸ§˜ Private sessions
+            {text("Private sessions", "\u062c\u0644\u0633\u0627\u062a \u062e\u0627\u0635\u0629")}
           </div>
           <div
             className="absolute top-1/2 -left-6 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
             style={{ animationDelay: "2s" }}
           >
-            ðŸ’ƒ Fitness classes
+            {text("Fitness classes", "\u062d\u0635\u0635 \u0631\u064a\u0627\u0636\u064a\u0629")}
           </div>
           <div
             className="absolute bottom-32 -right-6 glass px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
             style={{ animationDelay: "1.5s" }}
           >
-            ðŸ¥¤ Protein bar
+            {text("Protein bar", "\u0628\u0631\u0648\u062a\u064a\u0646 \u0628\u0627\u0631")}
           </div>
           <div
             className="absolute -bottom-2 left-12 glass-pink px-4 py-2 rounded-2xl text-xs font-semibold animate-float"
             style={{ animationDelay: "0.5s" }}
           >
-            âœ¨ Easy booking
+            {text("Easy booking", "\u062d\u062c\u0632 \u0633\u0647\u0644")}
           </div>
         </div>
       </div>
@@ -164,23 +210,35 @@ export function About() {
   const values = [
     {
       icon: Heart,
-      title: text("Supportive Environment", "???? ?????"),
-      desc: text("A welcoming space made by women, for women.", "????? ????? ?????? ??????."),
+      title: text(
+        "Supportive Environment",
+        "\u0628\u064a\u0626\u0629 \u062f\u0627\u0639\u0645\u0629",
+      ),
+      desc: text(
+        "A welcoming space made by women, for women.",
+        "\u0645\u0633\u0627\u062d\u0629 \u0645\u0631\u064a\u062d\u0629 \u0648\u0645\u062e\u0635\u0635\u0629 \u0644\u0644\u0646\u0633\u0627\u0621.",
+      ),
     },
     {
       icon: Users,
-      title: text("Professional Training", "????? ?????"),
+      title: text(
+        "Professional Training",
+        "\u062a\u062f\u0631\u064a\u0628 \u0645\u062d\u062a\u0631\u0641",
+      ),
       desc: text(
         "Certified coaches guiding every step of your journey.",
-        "?????? ??????? ?? ?? ????.",
+        "\u0645\u062f\u0631\u0628\u0627\u062a \u064a\u0633\u0627\u0639\u062f\u0646\u0643 \u0641\u064a \u0643\u0644 \u062e\u0637\u0648\u0629.",
       ),
     },
     {
       icon: Target,
-      title: text("Goal-Based Programs", "????? ??? ?????"),
+      title: text(
+        "Goal-Based Programs",
+        "\u0628\u0631\u0627\u0645\u062c \u062d\u0633\u0628 \u0627\u0644\u0647\u062f\u0641",
+      ),
       desc: text(
         "Tailored plans for strength, weight loss, and wellness.",
-        "??? ?????? ????? ?????? ??????.",
+        "\u062e\u0637\u0637 \u0644\u0644\u0642\u0648\u0629\u060c \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646\u060c \u0648\u0627\u0644\u0635\u062d\u0629.",
       ),
     },
   ];
@@ -188,15 +246,15 @@ export function About() {
     <section id="about" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("About Us", "?? ??????")}
-          title={text("About Miss Gym Fitness", "?? Miss Gym Fitness")}
+          eyebrow={text("About Us", "\u0639\u0646 \u0627\u0644\u0646\u0627\u062f\u064a")}
+          title={text("About Miss Gym Fitness", "\u0639\u0646 Miss Gym Fitness")}
         />
         <div className="grid lg:grid-cols-2 gap-12 items-center mt-12">
           <p className="text-lg text-white/70 leading-relaxed">
-            Miss Gym Fitness is a dedicated women's fitness destination in Jordan offering a safe,
-            supportive, and motivating environment. From personalized training and group classes to
-            expert nutrition guidance and a relaxing protein bar, we provide everything you need to
-            reach your fitness goals â€” your way, at your pace.
+            {text(
+              "Miss Gym Fitness is a dedicated women's fitness destination in Jordan offering a safe, supportive, and motivating environment. From personalized training and group classes to expert nutrition guidance and a relaxing protein bar, we provide everything you need to reach your fitness goals your way, at your pace.",
+              "\u0645\u064a\u0633 \u062c\u064a\u0645 \u0641\u062a\u0646\u0633 \u0648\u062c\u0647\u0629 \u0631\u064a\u0627\u0636\u064a\u0629 \u0646\u0633\u0627\u0626\u064a\u0629 \u0641\u064a \u0627\u0644\u0623\u0631\u062f\u0646 \u062a\u0648\u0641\u0631 \u0628\u064a\u0626\u0629 \u0622\u0645\u0646\u0629 \u0648\u062f\u0627\u0639\u0645\u0629 \u0648\u0645\u062d\u0641\u0632\u0629. \u0645\u0646 \u0627\u0644\u062a\u062f\u0631\u064a\u0628 \u0627\u0644\u0634\u062e\u0635\u064a \u0648\u0627\u0644\u062d\u0635\u0635 \u0627\u0644\u062c\u0645\u0627\u0639\u064a\u0629 \u0625\u0644\u0649 \u0627\u0644\u0625\u0631\u0634\u0627\u062f \u0627\u0644\u063a\u0630\u0627\u0626\u064a \u0648\u0627\u0644\u0628\u0631\u0648\u062a\u064a\u0646 \u0628\u0627\u0631\u060c \u0643\u0644 \u0645\u0627 \u062a\u062d\u062a\u0627\u062c\u064a\u0646\u0647 \u0644\u0647\u062f\u0641\u0643 \u0645\u062a\u0648\u0641\u0631.",
+            )}
           </p>
           <div className="grid sm:grid-cols-3 gap-4">
             {values.map((v) => (
@@ -222,18 +280,44 @@ export function About() {
 export function Subscriptions() {
   const { text } = useLanguage();
   const plans = [
-    { period: "1 Month", arabic: "اشتراك شهر", price: "25 دينار", highlight: false },
-    { period: "3 Months", arabic: "اشتراك 3 أشهر", price: "60 دينار", highlight: true },
-    { period: "6 Months", arabic: "اشتراك 6 أشهر", price: "110 دينار", highlight: false },
-    { period: "12 Months", arabic: "اشتراك 12 شهر", price: "205 دينار", highlight: false },
+    {
+      period: "1 Month",
+      arabic: "\u0627\u0634\u062a\u0631\u0627\u0643 \u0634\u0647\u0631",
+      price: "25 \u062f\u064a\u0646\u0627\u0631",
+      highlight: false,
+    },
+    {
+      period: "3 Months",
+      arabic: "\u0627\u0634\u062a\u0631\u0627\u0643 3 \u0623\u0634\u0647\u0631",
+      price: "60 \u062f\u064a\u0646\u0627\u0631",
+      highlight: true,
+    },
+    {
+      period: "6 Months",
+      arabic: "\u0627\u0634\u062a\u0631\u0627\u0643 6 \u0623\u0634\u0647\u0631",
+      price: "110 \u062f\u064a\u0646\u0627\u0631",
+      highlight: false,
+    },
+    {
+      period: "12 Months",
+      arabic: "\u0627\u0634\u062a\u0631\u0627\u0643 12 \u0634\u0647\u0631",
+      price: "205 \u062f\u064a\u0646\u0627\u0631",
+      highlight: false,
+    },
   ];
 
   return (
     <section id="subscriptions" className="py-24 bg-[#0c0c0e]">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Subscriptions", "الاشتراكات")}
-          title={text("Miss Gym Membership Prices", "أسعار اشتراكات Miss Gym")}
+          eyebrow={text(
+            "Subscriptions",
+            "\u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a",
+          )}
+          title={text(
+            "Miss Gym Membership Prices",
+            "\u0623\u0633\u0639\u0627\u0631 \u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a Miss Gym",
+          )}
         />
         <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-7 text-white/60">
           {text(
@@ -257,7 +341,10 @@ export function Subscriptions() {
                 </div>
                 {plan.highlight && (
                   <span className="rounded-full border border-pink-hot/40 bg-pink-hot/15 px-3 py-1 text-xs font-bold text-pink-soft">
-                    {text("Best Value", "الأفضل قيمة")}
+                    {text(
+                      "Best Value",
+                      "\u0627\u0644\u0623\u0641\u0636\u0644 \u0642\u064a\u0645\u0629",
+                    )}
                   </span>
                 )}
               </div>
@@ -274,7 +361,11 @@ export function Subscriptions() {
                 rel="noreferrer"
                 className="mt-7 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-pink py-3 text-sm font-semibold text-white transition hover:scale-[1.02]"
               >
-                <MessageCircle size={16} /> {text("Subscribe on WhatsApp", "اشتركي عبر واتساب")}
+                <MessageCircle size={16} />{" "}
+                {text(
+                  "Subscribe on WhatsApp",
+                  "\u0627\u0634\u062a\u0631\u0643\u064a \u0639\u0628\u0631 \u0648\u0627\u062a\u0633\u0627\u0628",
+                )}
               </a>
             </div>
           ))}
@@ -295,8 +386,8 @@ export function Gallery() {
     <section id="gallery" className="py-24 bg-[#0c0c0e]">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Gallery", "الصور")}
-          title={text("Inside Miss Gym", "داخل Miss Gym")}
+          eyebrow={text("Gallery", "\u0627\u0644\u0635\u0648\u0631")}
+          title={text("Inside Miss Gym", "\u062f\u0627\u062e\u0644 Miss Gym")}
         />
 
         <div className="flex flex-wrap gap-2 justify-center mt-8 mb-10">
@@ -360,8 +451,14 @@ export function Menu() {
     <section id="menu" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Protein Bar", "البروتين بار")}
-          title={text("Protein Bar & Products", "البروتين بار والمنتجات")}
+          eyebrow={text(
+            "Protein Bar",
+            "\u0627\u0644\u0628\u0631\u0648\u062a\u064a\u0646 \u0628\u0627\u0631",
+          )}
+          title={text(
+            "Protein Bar & Products",
+            "\u0627\u0644\u0628\u0631\u0648\u062a\u064a\u0646 \u0628\u0627\u0631 \u0648\u0627\u0644\u0645\u0646\u062a\u062c\u0627\u062a",
+          )}
         />
 
         <div className="flex flex-wrap gap-2 justify-center mt-8 mb-10">
@@ -465,8 +562,11 @@ export function Classes() {
     <section id="classes" className="py-24 bg-[#0c0c0e]">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Classes", "الحصص")}
-          title={text("Book Your Private Class", "احجزي حصتك الخاصة")}
+          eyebrow={text("Classes", "\u0627\u0644\u062d\u0635\u0635")}
+          title={text(
+            "Book Your Private Class",
+            "\u0627\u062d\u062c\u0632\u064a \u062d\u0635\u062a\u0643 \u0627\u0644\u062e\u0627\u0635\u0629",
+          )}
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
@@ -488,7 +588,7 @@ export function Classes() {
                   <span className="flex items-center gap-1">
                     <Clock size={12} /> {c.duration}
                   </span>
-                  <span>ðŸ‘©â€ðŸ« {c.trainer}</span>
+                  <span>{c.trainer}</span>
                 </div>
                 <div className="text-sm text-white/80 font-semibold mt-3">{c.price}</div>
                 <button onClick={() => setSelected(c.id)} className="mt-auto pt-4 w-full">
@@ -633,18 +733,29 @@ export function Location() {
     <section id="location" className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Visit Us", "زورينا")}
-          title={text("Find Miss Gym Fitness", "موقع Miss Gym Fitness")}
+          eyebrow={text("Visit Us", "\u0632\u0648\u0631\u064a\u0646\u0627")}
+          title={text("Find Miss Gym Fitness", "\u0645\u0648\u0642\u0639 Miss Gym Fitness")}
         />
         <div className="grid lg:grid-cols-2 gap-8 mt-12">
           <div className="glass rounded-3xl p-8 space-y-6">
-            <Info icon={MapPin} label={text("Address", "العنوان")} value={settings.address} />
+            <Info
+              icon={MapPin}
+              label={text("Address", "\u0627\u0644\u0639\u0646\u0648\u0627\u0646")}
+              value={settings.address}
+            />
             <Info
               icon={Clock}
-              label={text("Opening Hours", "ساعات العمل")}
+              label={text(
+                "Opening Hours",
+                "\u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0639\u0645\u0644",
+              )}
               value={settings.hours}
             />
-            <Info icon={Phone} label={text("Phone", "الهاتف")} value={phone} />
+            <Info
+              icon={Phone}
+              label={text("Phone", "\u0627\u0644\u0647\u0627\u062a\u0641")}
+              value={phone}
+            />
             <div className="flex flex-wrap gap-3 pt-4">
               <a
                 href={settings.mapsLink}
@@ -678,7 +789,7 @@ export function Location() {
                 rel="noreferrer"
                 className="inline-block mt-4 text-pink-hot text-sm font-semibold hover:underline"
               >
-                View on Google Maps â†’
+                View on Google Maps
               </a>
             </div>
           </div>
@@ -710,8 +821,11 @@ export function Offers() {
     <section className="py-24 bg-[#0c0c0e]">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Special", "عروض")}
-          title={text("Latest Offers", "أحدث العروض")}
+          eyebrow={text("Special", "\u0639\u0631\u0648\u0636")}
+          title={text(
+            "Latest Offers",
+            "\u0623\u062d\u062f\u062b \u0627\u0644\u0639\u0631\u0648\u0636",
+          )}
         />
         <div className="grid md:grid-cols-3 gap-5 mt-12">
           {offers
@@ -728,14 +842,18 @@ export function Offers() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 glass-pink px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                    {text("Limited", "لفترة محدودة")}
+                    {text(
+                      "Limited",
+                      "\u0644\u0641\u062a\u0631\u0629 \u0645\u062d\u062f\u0648\u062f\u0629",
+                    )}
                   </div>
                 </div>
                 <div className="p-6">
                   <div className="font-bold text-white text-lg">{o.title}</div>
                   <p className="text-sm text-white/60 mt-2">{o.description}</p>
                   <div className="text-xs text-white/50 mt-3">
-                    {text("Valid until:", "صالح حتى:")} {o.validUntil}
+                    {text("Valid until:", "\u0635\u0627\u0644\u062d \u062d\u062a\u0649:")}{" "}
+                    {o.validUntil}
                   </div>
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi! I'd like to ask about the offer: " + o.title)}`}
@@ -743,7 +861,10 @@ export function Offers() {
                     rel="noreferrer"
                     className="mt-4 w-full flex items-center justify-center gap-2 bg-gradient-pink text-white text-sm font-semibold py-2.5 rounded-xl"
                   >
-                    {text("Ask About This Offer", "اسألي عن العرض")}
+                    {text(
+                      "Ask About This Offer",
+                      "\u0627\u0633\u0623\u0644\u064a \u0639\u0646 \u0627\u0644\u0639\u0631\u0636",
+                    )}
                   </a>
                 </div>
               </div>
@@ -756,16 +877,35 @@ export function Offers() {
 
 /* ------------------------------- AI ASSISTANT ------------------------------- */
 export function AIAssistant() {
+  const { text } = useLanguage();
   const messages = [
-    { role: "user", text: "What membership is best for me?" },
     {
-      role: "ai",
-      text: "I can help! Could you share your main goal â€” strength, weight loss, or general fitness?",
+      role: "user",
+      text: text(
+        "What membership is best for me?",
+        "\u0645\u0627 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u0627\u0644\u0623\u0646\u0633\u0628 \u0644\u064a\u061f",
+      ),
     },
-    { role: "user", text: "I'd like weight loss." },
     {
       role: "ai",
-      text: "Our Weight Loss Program (8 weeks) plus 2 weekly Zumba classes is a popular start. Want me to check availability?",
+      text: text(
+        "I can help! Could you share your main goal - strength, weight loss, or general fitness?",
+        "\u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0639\u062f\u0643! \u0645\u0627 \u0647\u062f\u0641\u0643 \u0627\u0644\u0623\u0633\u0627\u0633\u064a\u061f \u0642\u0648\u0629\u060c \u062e\u0633\u0627\u0631\u0629 \u0648\u0632\u0646\u060c \u0623\u0648 \u0644\u064a\u0627\u0642\u0629 \u0639\u0627\u0645\u0629\u061f",
+      ),
+    },
+    {
+      role: "user",
+      text: text(
+        "I'd like weight loss.",
+        "\u0647\u062f\u0641\u064a \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646.",
+      ),
+    },
+    {
+      role: "ai",
+      text: text(
+        "Our Weight Loss Program (8 weeks) plus 2 weekly Zumba classes is a popular start. Want me to check availability?",
+        "\u0628\u0631\u0646\u0627\u0645\u062c \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646 \u0645\u0639 \u062d\u0635\u0635 \u0632\u0648\u0645\u0628\u0627 \u0623\u0633\u0628\u0648\u0639\u064a\u0629 \u062e\u064a\u0627\u0631 \u0645\u0646\u0627\u0633\u0628 \u0644\u0644\u0628\u062f\u0621. \u0647\u0644 \u0623\u062a\u062d\u0642\u0642 \u0645\u0646 \u0627\u0644\u062a\u0648\u0641\u0631\u061f",
+      ),
     },
   ];
   return (
@@ -776,23 +916,49 @@ export function AIAssistant() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <div className="inline-flex items-center gap-2 glass-pink px-3 py-1 rounded-full text-xs font-bold mb-5">
-            <Sparkles size={12} /> Optional Future Feature
+            <Sparkles size={12} />{" "}
+            {text(
+              "Optional Future Feature",
+              "\u0645\u064a\u0632\u0629 \u0645\u0633\u062a\u0642\u0628\u0644\u064a\u0629",
+            )}
           </div>
           <h2 className="text-4xl md:text-5xl font-black">
-            Coming Soon: <br />
-            <span className="text-gradient-pink">Miss Gym Smart Assistant</span>
+            {text("Coming Soon:", "\u0642\u0631\u064a\u0628\u0627:")} <br />
+            <span className="text-gradient-pink">
+              {text(
+                "Miss Gym Smart Assistant",
+                "\u0645\u0633\u0627\u0639\u062f Miss Gym \u0627\u0644\u0630\u0643\u064a",
+              )}
+            </span>
           </h2>
           <p className="text-white/70 mt-5 max-w-lg">
-            Miss Gym Smart Assistant can later help visitors ask about memberships, classes,
-            booking, opening hours, and fitness goals â€” all from your website, 24/7.
+            {text(
+              "Miss Gym Smart Assistant can later help visitors ask about memberships, classes, booking, opening hours, and fitness goals - all from your website, 24/7.",
+              "\u0645\u0633\u0627\u0639\u062f Miss Gym \u0627\u0644\u0630\u0643\u064a \u064a\u0645\u0643\u0646\u0647 \u0645\u0633\u0627\u0639\u062f\u0629 \u0627\u0644\u0632\u0627\u0626\u0631\u0627\u062a \u0641\u064a \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a\u060c \u0627\u0644\u062d\u0635\u0635\u060c \u0627\u0644\u062d\u062c\u0632\u060c \u0648\u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0639\u0645\u0644.",
+            )}
           </p>
           <ul className="mt-6 space-y-3 text-sm text-white/70">
             {[
-              "What membership is best for me?",
-              "What classes do you offer?",
-              "How can I book a private session?",
-              "What should I choose if my goal is weight loss?",
-              "What are your opening hours?",
+              text(
+                "What membership is best for me?",
+                "\u0645\u0627 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u0627\u0644\u0623\u0646\u0633\u0628 \u0644\u064a\u061f",
+              ),
+              text(
+                "What classes do you offer?",
+                "\u0645\u0627 \u0627\u0644\u062d\u0635\u0635 \u0627\u0644\u0645\u062a\u0648\u0641\u0631\u0629\u061f",
+              ),
+              text(
+                "How can I book a private session?",
+                "\u0643\u064a\u0641 \u0623\u062d\u062c\u0632 \u062c\u0644\u0633\u0629 \u062e\u0627\u0635\u0629\u061f",
+              ),
+              text(
+                "What should I choose if my goal is weight loss?",
+                "\u0645\u0627\u0630\u0627 \u0623\u062e\u062a\u0627\u0631 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0647\u062f\u0641\u064a \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646\u061f",
+              ),
+              text(
+                "What are your opening hours?",
+                "\u0645\u0627 \u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0639\u0645\u0644\u061f",
+              ),
             ].map((q) => (
               <li key={q} className="flex items-start gap-2">
                 <ChevronRight size={16} className="text-pink-hot mt-0.5 shrink-0" /> {q}
@@ -808,7 +974,7 @@ export function AIAssistant() {
             </div>
             <div>
               <div className="font-bold text-white text-sm">Miss Gym Assistant</div>
-              <div className="text-[10px] text-pink-soft">â— Demo preview</div>
+              <div className="text-[10px] text-pink-soft">Demo preview</div>
             </div>
           </div>
           <div className="space-y-3 py-4 max-h-[300px] overflow-y-auto">
@@ -832,7 +998,10 @@ export function AIAssistant() {
           <div className="flex gap-2 pt-3 border-t border-white/10">
             <input
               disabled
-              placeholder="Ask me anything..."
+              placeholder={text(
+                "Ask me anything...",
+                "\u0627\u0633\u0623\u0644\u064a \u0623\u064a \u0634\u064a\u0621...",
+              )}
               className="flex-1 bg-surface-2 rounded-xl px-3 py-2.5 text-sm text-white/60 border border-white/5"
             />
             <button
@@ -860,7 +1029,12 @@ export function Contact() {
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(text("Message sent! We'll reply soon.", "تم إرسال الرسالة! سنتواصل معك قريبا."));
+    toast.success(
+      text(
+        "Message sent! We'll reply soon.",
+        "\u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0644\u0629! \u0633\u0646\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0643 \u0642\u0631\u064a\u0628\u0627.",
+      ),
+    );
     setForm({ name: "", phone: "", message: "" });
   };
 
@@ -868,8 +1042,14 @@ export function Contact() {
     <section id="contact" className="py-24 bg-[#0c0c0e]">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
-          eyebrow={text("Get In Touch", "تواصلي معنا")}
-          title={text("Ready to Start?", "جاهزة تبدئي؟")}
+          eyebrow={text(
+            "Get In Touch",
+            "\u062a\u0648\u0627\u0635\u0644\u064a \u0645\u0639\u0646\u0627",
+          )}
+          title={text(
+            "Ready to Start?",
+            "\u062c\u0627\u0647\u0632\u0629 \u062a\u0628\u062f\u0626\u064a\u061f",
+          )}
         />
 
         <div className="grid lg:grid-cols-2 gap-8 mt-12">
@@ -884,8 +1064,12 @@ export function Contact() {
                 <MessageCircle />
               </div>
               <div>
-                <div className="text-xs text-white/50">{text("WhatsApp", "واتساب")}</div>
-                <div className="font-bold text-white">{text("Chat with us", "راسلينا")}</div>
+                <div className="text-xs text-white/50">
+                  {text("WhatsApp", "\u0648\u0627\u062a\u0633\u0627\u0628")}
+                </div>
+                <div className="font-bold text-white">
+                  {text("Chat with us", "\u0631\u0627\u0633\u0644\u064a\u0646\u0627")}
+                </div>
               </div>
             </a>
             <a
@@ -896,7 +1080,9 @@ export function Contact() {
                 <Phone />
               </div>
               <div>
-                <div className="text-xs text-white/50">{text("Phone", "الهاتف")}</div>
+                <div className="text-xs text-white/50">
+                  {text("Phone", "\u0627\u0644\u0647\u0627\u062a\u0641")}
+                </div>
                 <div className="font-bold text-white">{phone}</div>
               </div>
             </a>
@@ -908,7 +1094,9 @@ export function Contact() {
                 className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition"
               >
                 <Instagram className="text-pink-hot" />
-                <div className="font-bold text-white text-sm">{text("Instagram", "إنستغرام")}</div>
+                <div className="font-bold text-white text-sm">
+                  {text("Instagram", "\u0625\u0646\u0633\u062a\u063a\u0631\u0627\u0645")}
+                </div>
               </a>
               <a
                 href={settings.facebook}
@@ -917,30 +1105,35 @@ export function Contact() {
                 className="flex items-center gap-3 glass rounded-2xl p-5 hover:border-pink-hot/50 transition"
               >
                 <Facebook className="text-pink-hot" />
-                <div className="font-bold text-white text-sm">{text("Facebook", "فيسبوك")}</div>
+                <div className="font-bold text-white text-sm">
+                  {text("Facebook", "\u0641\u064a\u0633\u0628\u0648\u0643")}
+                </div>
               </a>
             </div>
           </div>
 
           <form onSubmit={submit} className="glass rounded-3xl p-7 space-y-3">
             <Input
-              label={text("Name", "الاسم")}
+              label={text("Name", "\u0627\u0644\u0627\u0633\u0645")}
               value={form.name}
               onChange={(v) => setForm({ ...form, name: v })}
             />
             <Input
-              label={text("Phone", "الهاتف")}
+              label={text("Phone", "\u0627\u0644\u0647\u0627\u062a\u0641")}
               value={form.phone}
               onChange={(v) => setForm({ ...form, phone: v })}
             />
             <Input
-              label={text("Message", "الرسالة")}
+              label={text("Message", "\u0627\u0644\u0631\u0633\u0627\u0644\u0629")}
               value={form.message}
               onChange={(v) => setForm({ ...form, message: v })}
               textarea
             />
             <button className="w-full bg-gradient-pink text-white font-semibold py-3 rounded-xl mt-2">
-              {text("Send Message", "إرسال الرسالة")}
+              {text(
+                "Send Message",
+                "\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0644\u0629",
+              )}
             </button>
           </form>
         </div>

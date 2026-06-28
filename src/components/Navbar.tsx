@@ -5,14 +5,18 @@ import { Logo } from "./Logo";
 import { useLanguage } from "@/lib/language";
 
 const links = [
-  { label: "Home", ar: "الرئيسية", href: "#home" },
-  { label: "About", ar: "عن النادي", href: "#about" },
-  { label: "Subscriptions", ar: "الاشتراكات", href: "#subscriptions" },
-  { label: "Gallery", ar: "الصور", href: "#gallery" },
-  { label: "Menu", ar: "المنيو", href: "#menu" },
-  { label: "Classes", ar: "الحصص", href: "#classes" },
-  { label: "Location", ar: "الموقع", href: "#location" },
-  { label: "Contact", ar: "تواصل", href: "#contact" },
+  { label: "Home", ar: "\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629", href: "#home" },
+  { label: "About", ar: "\u0639\u0646 \u0627\u0644\u0646\u0627\u062f\u064a", href: "#about" },
+  {
+    label: "Subscriptions",
+    ar: "\u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a",
+    href: "#subscriptions",
+  },
+  { label: "Gallery", ar: "\u0627\u0644\u0635\u0648\u0631", href: "#gallery" },
+  { label: "Menu", ar: "\u0627\u0644\u0645\u0646\u064a\u0648", href: "#menu" },
+  { label: "Classes", ar: "\u0627\u0644\u062d\u0635\u0635", href: "#classes" },
+  { label: "Location", ar: "\u0627\u0644\u0645\u0648\u0642\u0639", href: "#location" },
+  { label: "Contact", ar: "\u062a\u0648\u0627\u0635\u0644", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -55,19 +59,20 @@ export function Navbar() {
             onClick={toggleLanguage}
             className="flex items-center gap-2 text-sm text-white/70 hover:text-white px-3 py-2 rounded-full border border-white/15 hover:border-pink-hot/50 transition"
           >
-            <Languages size={16} /> {text("العربية", "English")}
+            <Languages size={16} /> {text("\u0627\u0644\u0639\u0631\u0628\u064a\u0629", "English")}
           </button>
           <Link
             to="/admin"
             className="flex items-center gap-2 text-sm text-white/70 hover:text-white px-3 py-2 rounded-full border border-white/15 hover:border-pink-hot/50 transition"
           >
-            <LayoutDashboard size={16} /> {text("Admin", "الإدارة")}
+            <LayoutDashboard size={16} />{" "}
+            {text("Admin", "\u0627\u0644\u0625\u062f\u0627\u0631\u0629")}
           </Link>
           <a
             href="#classes"
             className="bg-gradient-pink text-white font-semibold text-sm px-5 py-2.5 rounded-full glow-pink hover:scale-105 transition-transform"
           >
-            {text("Book Now", "احجزي الآن")}
+            {text("Book Now", "\u0627\u062d\u062c\u0632\u064a \u0627\u0644\u0622\u0646")}
           </a>
         </div>
 
@@ -93,21 +98,25 @@ export function Navbar() {
             </a>
           ))}
           <button onClick={toggleLanguage} className="flex items-center gap-2 text-white/80 py-1">
-            <Languages size={16} /> {text("العربية", "English")}
+            <Languages size={16} /> {text("\u0627\u0644\u0639\u0631\u0628\u064a\u0629", "English")}
           </button>
           <Link
             to="/admin"
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 text-white/80 py-1"
           >
-            <LayoutDashboard size={16} /> {text("Admin Preview", "معاينة الإدارة")}
+            <LayoutDashboard size={16} />{" "}
+            {text(
+              "Admin Preview",
+              "\u0645\u0639\u0627\u064a\u0646\u0629 \u0627\u0644\u0625\u062f\u0627\u0631\u0629",
+            )}
           </Link>
           <a
             href="#classes"
             onClick={() => setOpen(false)}
             className="block text-center bg-gradient-pink text-white font-semibold px-5 py-3 rounded-full"
           >
-            {text("Book Now", "احجزي الآن")}
+            {text("Book Now", "\u0627\u062d\u062c\u0632\u064a \u0627\u0644\u0622\u0646")}
           </a>
         </div>
       )}

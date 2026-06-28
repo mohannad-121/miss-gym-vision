@@ -15,7 +15,7 @@ import {
   AIAssistant,
   Contact,
 } from "@/components/sections";
-import { LanguageProvider, useLanguage } from "@/lib/language";
+import { useLanguage } from "@/lib/language";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,14 +37,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return (
-    <LanguageProvider>
-      <HomePage />
-    </LanguageProvider>
-  );
-}
-
-function HomePage() {
   const { dir, language } = useLanguage();
   return (
     <div className="min-h-screen bg-background text-foreground" dir={dir} lang={language}>
