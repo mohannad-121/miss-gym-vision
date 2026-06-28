@@ -11,7 +11,6 @@ import {
   Calendar,
   Clock,
   ChevronRight,
-  Send,
   Bot,
   Instagram,
   Facebook,
@@ -875,147 +874,199 @@ export function Offers() {
   );
 }
 
-/* ------------------------------- AI ASSISTANT ------------------------------- */
-export function AIAssistant() {
+/* ------------------------- FITCOACH AI COMING SOON ------------------------- */
+export function FitCoachComingSoonSection() {
   const { text } = useLanguage();
-  const messages = [
-    {
-      role: "user",
-      text: text(
-        "What membership is best for me?",
-        "\u0645\u0627 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u0627\u0644\u0623\u0646\u0633\u0628 \u0644\u064a\u061f",
-      ),
-    },
-    {
-      role: "ai",
-      text: text(
-        "I can help! Could you share your main goal - strength, weight loss, or general fitness?",
-        "\u0623\u0642\u062f\u0631 \u0623\u0633\u0627\u0639\u062f\u0643! \u0645\u0627 \u0647\u062f\u0641\u0643 \u0627\u0644\u0623\u0633\u0627\u0633\u064a\u061f \u0642\u0648\u0629\u060c \u062e\u0633\u0627\u0631\u0629 \u0648\u0632\u0646\u060c \u0623\u0648 \u0644\u064a\u0627\u0642\u0629 \u0639\u0627\u0645\u0629\u061f",
-      ),
-    },
-    {
-      role: "user",
-      text: text(
-        "I'd like weight loss.",
-        "\u0647\u062f\u0641\u064a \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646.",
-      ),
-    },
-    {
-      role: "ai",
-      text: text(
-        "Our Weight Loss Program (8 weeks) plus 2 weekly Zumba classes is a popular start. Want me to check availability?",
-        "\u0628\u0631\u0646\u0627\u0645\u062c \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646 \u0645\u0639 \u062d\u0635\u0635 \u0632\u0648\u0645\u0628\u0627 \u0623\u0633\u0628\u0648\u0639\u064a\u0629 \u062e\u064a\u0627\u0631 \u0645\u0646\u0627\u0633\u0628 \u0644\u0644\u0628\u062f\u0621. \u0647\u0644 \u0623\u062a\u062d\u0642\u0642 \u0645\u0646 \u0627\u0644\u062a\u0648\u0641\u0631\u061f",
-      ),
-    },
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const previewSrc = "/assets/fitcoach-ai-preview.svg";
+  const questions = [
+    text("What plan best fits my goal?", "ما الخطة الأنسب لهدفي؟"),
+    text("How do I build a workout schedule for weight loss?", "كيف أبني جدول تمرين لخسارة الوزن؟"),
+    text("How do I choose between cutting or bulking?", "كيف أختار بين خطة تنشيف أو تضخيم؟"),
+    text("What exercises fit my current level?", "ما التمارين المناسبة لمستواي الحالي؟"),
+    text("How do I move the plan into my weekly schedule?", "كيف أنقل الخطة إلى جدولي الأسبوعي؟"),
+    text("What nutrition tips support my goal?", "ما النصائح الغذائية المناسبة لهدفي؟"),
+    text(
+      "Can I adjust the plan around my available days?",
+      "هل أقدر أعدل الخطة حسب أيامي المتاحة؟",
+    ),
+    text("How do I track progress over time?", "كيف أتابع تقدمي مع الوقت؟"),
   ];
-  return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-pink-hot/20 blur-[120px]" />
-      </div>
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 glass-pink px-3 py-1 rounded-full text-xs font-bold mb-5">
-            <Sparkles size={12} />{" "}
-            {text(
-              "Optional Future Feature",
-              "\u0645\u064a\u0632\u0629 \u0645\u0633\u062a\u0642\u0628\u0644\u064a\u0629",
-            )}
-          </div>
-          <h2 className="text-4xl md:text-5xl font-black">
-            {text("Coming Soon:", "\u0642\u0631\u064a\u0628\u0627:")} <br />
-            <span className="text-gradient-pink">
-              {text(
-                "Miss Gym Smart Assistant",
-                "\u0645\u0633\u0627\u0639\u062f Miss Gym \u0627\u0644\u0630\u0643\u064a",
-              )}
-            </span>
-          </h2>
-          <p className="text-white/70 mt-5 max-w-lg">
-            {text(
-              "Miss Gym Smart Assistant can later help visitors ask about memberships, classes, booking, opening hours, and fitness goals - all from your website, 24/7.",
-              "\u0645\u0633\u0627\u0639\u062f Miss Gym \u0627\u0644\u0630\u0643\u064a \u064a\u0645\u0643\u0646\u0647 \u0645\u0633\u0627\u0639\u062f\u0629 \u0627\u0644\u0632\u0627\u0626\u0631\u0627\u062a \u0641\u064a \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643\u0627\u062a\u060c \u0627\u0644\u062d\u0635\u0635\u060c \u0627\u0644\u062d\u062c\u0632\u060c \u0648\u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0639\u0645\u0644.",
-            )}
-          </p>
-          <ul className="mt-6 space-y-3 text-sm text-white/70">
-            {[
-              text(
-                "What membership is best for me?",
-                "\u0645\u0627 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u0627\u0644\u0623\u0646\u0633\u0628 \u0644\u064a\u061f",
-              ),
-              text(
-                "What classes do you offer?",
-                "\u0645\u0627 \u0627\u0644\u062d\u0635\u0635 \u0627\u0644\u0645\u062a\u0648\u0641\u0631\u0629\u061f",
-              ),
-              text(
-                "How can I book a private session?",
-                "\u0643\u064a\u0641 \u0623\u062d\u062c\u0632 \u062c\u0644\u0633\u0629 \u062e\u0627\u0635\u0629\u061f",
-              ),
-              text(
-                "What should I choose if my goal is weight loss?",
-                "\u0645\u0627\u0630\u0627 \u0623\u062e\u062a\u0627\u0631 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0647\u062f\u0641\u064a \u062e\u0633\u0627\u0631\u0629 \u0627\u0644\u0648\u0632\u0646\u061f",
-              ),
-              text(
-                "What are your opening hours?",
-                "\u0645\u0627 \u0633\u0627\u0639\u0627\u062a \u0627\u0644\u0639\u0645\u0644\u061f",
-              ),
-            ].map((q) => (
-              <li key={q} className="flex items-start gap-2">
-                <ChevronRight size={16} className="text-pink-hot mt-0.5 shrink-0" /> {q}
-              </li>
-            ))}
-          </ul>
-        </div>
+  const features = [
+    text("Custom workout plans", "خطط تمرين مخصصة"),
+    text("Smart nutrition guidance", "إرشادات تغذية ذكية"),
+    text("Practical weekly schedule", "جدول أسبوعي قابل للتطبيق"),
+    text("Plan review and approval", "اختيار الخطة والموافقة عليها"),
+    text("Goal and progress support", "متابعة الهدف والتقدم"),
+    text("Miss Gym member experience", "تجربة مخصصة لمشتركات Miss Gym"),
+  ];
 
-        <div className="glass rounded-3xl p-5 glow-pink">
-          <div className="flex items-center gap-3 pb-4 border-b border-white/10">
-            <div className="h-10 w-10 rounded-xl bg-gradient-pink grid place-items-center animate-pulse-glow">
-              <Bot size={18} />
+  return (
+    <section className="py-24 relative overflow-hidden bg-[#08080a]">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 right-10 h-[460px] w-[460px] rounded-full bg-pink-hot/20 blur-[120px]" />
+        <div className="absolute bottom-10 left-10 h-[380px] w-[380px] rounded-full bg-fuchsia-500/15 blur-[110px]" />
+      </div>
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="order-1 lg:order-2 animate-fade-up">
+            <div className="inline-flex items-center gap-2 glass-pink px-4 py-1.5 rounded-full text-xs text-pink-soft font-bold mb-5">
+              <Sparkles size={14} />
+              {text("Coming Soon", "ميزة قادمة")}
             </div>
-            <div>
-              <div className="font-bold text-white text-sm">Miss Gym Assistant</div>
-              <div className="text-[10px] text-pink-soft">Demo preview</div>
-            </div>
-          </div>
-          <div className="space-y-3 py-4 max-h-[300px] overflow-y-auto">
-            {messages.map((m, i) => (
-              <div
-                key={i}
-                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[80%] text-sm px-4 py-2.5 rounded-2xl ${
-                    m.role === "user"
-                      ? "bg-gradient-pink text-white rounded-br-sm"
-                      : "bg-surface-2 text-white/90 rounded-bl-sm"
-                  }`}
-                >
-                  {m.text}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="flex gap-2 pt-3 border-t border-white/10">
-            <input
-              disabled
-              placeholder={text(
-                "Ask me anything...",
-                "\u0627\u0633\u0623\u0644\u064a \u0623\u064a \u0634\u064a\u0621...",
+            <h2 className="text-4xl md:text-5xl font-black leading-tight">
+              {text("FitCoach AI — Coming Soon to Miss Gym", "FitCoach AI قريبًا داخل Miss Gym")}
+            </h2>
+            <p className="text-white/72 mt-5 leading-8 max-w-2xl">
+              {text(
+                "Imagine an intelligent coach inside the Miss Gym website that helps members choose a suitable workout plan, understand their goal, organize a weekly schedule, and get tailored training and nutrition guidance based on their profile.",
+                "تخيّلي وجود مدرب ذكي داخل موقع Miss Gym يساعد المشتركات على اختيار خطة تمرين مناسبة، فهم الهدف، ترتيب الجدول الأسبوعي، والحصول على إرشادات تغذية وتمرين بطريقة سهلة ومخصصة.",
               )}
-              className="flex-1 bg-surface-2 rounded-xl px-3 py-2.5 text-sm text-white/60 border border-white/5"
-            />
-            <button
-              disabled
-              className="h-10 w-10 grid place-items-center rounded-xl bg-gradient-pink"
-            >
-              <Send size={16} />
-            </button>
+            </p>
+
+            <div className="mt-7 glass rounded-2xl p-5 border-pink-hot/20">
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 shrink-0 rounded-xl bg-gradient-pink grid place-items-center animate-pulse-glow">
+                  <Bot size={18} />
+                </div>
+                <p className="text-sm leading-7 text-white/78">
+                  {text(
+                    "FitCoach AI is not just a general chatbot. Later, it can be customized to work inside Miss Gym around the club services, class types, member goals, and training times.",
+                    "FitCoach AI ليس مجرد ChatGPT عام، بل يمكن تخصيصه لاحقًا ليعمل داخل Miss Gym بناءً على خدمات النادي، أنواع الحصص، أهداف المشتركات، ومواعيد التدريب.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-7">
+              <h3 className="text-lg font-extrabold text-white mb-4">
+                {text(
+                  "Examples of questions members could ask:",
+                  "أمثلة على أسئلة يمكن للمشتركات طرحها:",
+                )}
+              </h3>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {questions.map((q, index) => (
+                  <div
+                    key={q}
+                    className="glass rounded-2xl px-4 py-3 text-sm text-white/78 flex items-start gap-3 hover:border-pink-hot/45 transition-all duration-300"
+                    style={{ animationDelay: `${index * 45}ms` }}
+                  >
+                    <ChevronRight className="mt-0.5 shrink-0 text-pink-hot" size={16} />
+                    <span>{q}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-7 grid sm:grid-cols-3 gap-3">
+              {features.map((feature) => (
+                <div
+                  key={feature}
+                  className="glass-pink rounded-2xl px-4 py-4 text-center text-sm font-bold text-white"
+                >
+                  {feature}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onClick={() => {
+                  document.getElementById("fitcoach-preview")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                  setPreviewOpen(true);
+                }}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-pink px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_45px_rgba(236,72,153,0.35)] hover:scale-[1.02] transition-transform"
+              >
+                <Sparkles size={16} />
+                {text("See FitCoach AI Concept", "شاهد فكرة FitCoach AI")}
+              </button>
+              <a
+                href="#classes"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-6 py-3 text-sm font-extrabold text-white hover:border-pink-hot/60 hover:bg-pink-hot/10 transition-colors"
+              >
+                <Calendar size={16} />
+                {text("Book a Class Now", "احجزي حصة الآن")}
+              </a>
+            </div>
+          </div>
+
+          <div id="fitcoach-preview" className="order-2 lg:order-1">
+            <div className="relative animate-float">
+              <div className="absolute -inset-5 rounded-[2rem] bg-pink-hot/25 blur-3xl" />
+              <button
+                type="button"
+                onClick={() => setPreviewOpen(true)}
+                className="relative w-full overflow-hidden rounded-[1.75rem] border border-pink-hot/35 bg-black/50 p-3 text-left shadow-[0_0_85px_rgba(236,72,153,0.32)] backdrop-blur-xl"
+                aria-label={text(
+                  "Open FitCoach AI project preview",
+                  "افتح معاينة مشروع FitCoach AI",
+                )}
+              >
+                <div className="flex items-center justify-between px-3 py-3">
+                  <span className="glass-pink rounded-full px-3 py-1 text-[11px] font-extrabold text-pink-soft">
+                    Real FitCoach AI Preview
+                  </span>
+                  <span className="rounded-full bg-white/8 px-3 py-1 text-[11px] font-bold text-white/60">
+                    {text("Future Feature", "ميزة مستقبلية")}
+                  </span>
+                </div>
+                <div className="rounded-[1.25rem] bg-[#0e1014] p-2">
+                  <img
+                    src={previewSrc}
+                    alt="FitCoach AI project preview"
+                    className="h-auto max-h-[560px] w-full rounded-2xl object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="px-3 pb-3 pt-4 text-center text-xs leading-6 text-white/62">
+                  {text(
+                    "A real interface preview from FitCoach AI showing how a workout plan can be generated, reviewed, and approved.",
+                    "واجهة حقيقية من مشروع FitCoach AI توضّح كيف يمكن توليد خطة تمرين ومراجعتها قبل اعتمادها.",
+                  )}
+                </p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
+
+      {previewOpen && (
+        <div
+          className="fixed inset-0 z-50 grid place-items-center bg-black/82 p-4 backdrop-blur-md"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setPreviewOpen(false)}
+        >
+          <div
+            className="relative max-h-[92vh] w-full max-w-5xl overflow-hidden rounded-[1.5rem] border border-pink-hot/35 bg-[#0c0c0f] p-3 shadow-[0_0_90px_rgba(236,72,153,0.4)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setPreviewOpen(false)}
+              className="absolute right-5 top-5 z-10 grid h-10 w-10 place-items-center rounded-full bg-black/75 text-white hover:bg-pink-hot transition-colors"
+              aria-label={text("Close preview", "إغلاق المعاينة")}
+            >
+              <X size={18} />
+            </button>
+            <img
+              src={previewSrc}
+              alt="FitCoach AI project preview"
+              className="max-h-[86vh] w-full rounded-2xl object-contain"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
+export const AIAssistant = FitCoachComingSoonSection;
 
 /* ------------------------------- CONTACT ------------------------------- */
 export function Contact() {

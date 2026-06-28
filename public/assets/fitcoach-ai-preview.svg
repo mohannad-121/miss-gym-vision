@@ -1,0 +1,42 @@
+<svg width="1220" height="880" viewBox="0 0 1220 880" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1220" height="880" rx="36" fill="#101113"/>
+  <rect x="28" y="28" width="1164" height="824" rx="30" fill="#15171a" stroke="#2d3138" stroke-width="2"/>
+  <circle cx="112" cy="86" r="13" fill="#ff4f9a"/>
+  <circle cx="154" cy="86" r="13" fill="#ec4899" opacity=".65"/>
+  <circle cx="196" cy="86" r="13" fill="#f9a8d4" opacity=".45"/>
+  <rect x="760" y="58" width="330" height="48" rx="24" fill="#0ea5c6"/>
+  <text x="925" y="89" fill="white" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="22" font-weight="700" text-anchor="middle">بدي خطة تمارين مناسبة إلي</text>
+  <rect x="138" y="140" width="760" height="478" rx="22" fill="#202225"/>
+  <rect x="138" y="140" width="760" height="478" rx="22" stroke="#32363d" stroke-width="2"/>
+  <circle cx="190" cy="192" r="18" fill="#ec4899"/>
+  <text x="848" y="202" fill="white" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="24" font-weight="800" text-anchor="end">لماذا هذه الخطة مناسبة لك؟</text>
+  <text x="848" y="254" fill="#f4f4f5" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="22" text-anchor="end">اخترت لك أقوى خيار واحد بناءً على هدفك ونوع جسمك</text>
+  <text x="848" y="303" fill="#d4d4d8" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="21" text-anchor="end">إشارات التخصيص الأساسية المستخدمة: العمر 30، الجسم 21.6</text>
+  <text x="848" y="355" fill="#f4f4f5" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="22" font-weight="700" text-anchor="end">تضخيم 1 - Push، المستوى متوسط، 5 أيام تدريب</text>
+  <text x="848" y="410" fill="#ff4f9a" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="22" font-weight="700" text-anchor="end">الملخص</text>
+  <text x="848" y="462" fill="#f4f4f5" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="21" text-anchor="end">أيام التمرين: Saturday، Sunday، Monday، Wednesday، Friday</text>
+  <text x="848" y="511" fill="#f4f4f5" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="21" text-anchor="end">أيام الراحة: Tuesday، Thursday</text>
+  <text x="848" y="560" fill="#f4f4f5" font-family="Arial, 'Noto Kufi Arabic', sans-serif" font-size="21" text-anchor="end">عدد أيام التدريب: 5</text>
+  <rect x="118" y="636" width="892" height="198" rx="22" fill="#111827" stroke="#536179" stroke-width="2"/>
+  <text x="152" y="681" fill="white" font-family="Arial, sans-serif" font-size="25" font-weight="800">Pull - Hypertrophy 1</text>
+  <text x="152" y="713" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="18">7 days - 25 exercises</text>
+  <rect x="884" y="656" width="82" height="30" rx="6" fill="#a16207"/>
+  <text x="925" y="677" fill="#fde68a" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Pending</text>
+  <text x="152" y="758" fill="white" font-family="Arial, sans-serif" font-size="19" font-weight="700">Exercises:</text>
+  <rect x="152" y="780" width="178" height="28" rx="6" fill="#3559d6"/>
+  <rect x="342" y="780" width="184" height="28" rx="6" fill="#3559d6"/>
+  <rect x="538" y="780" width="166" height="28" rx="6" fill="#3559d6"/>
+  <rect x="716" y="780" width="176" height="28" rx="6" fill="#3559d6"/>
+  <text x="241" y="800" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Barbell Bench Press</text>
+  <text x="434" y="800" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Incline Barbell Press</text>
+  <text x="621" y="800" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Incline Dumbbell Fly</text>
+  <text x="804" y="800" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Barbell Overhead</text>
+  <rect x="152" y="822" width="92" height="40" rx="20" fill="#16a34a"/>
+  <text x="198" y="847" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">Approve</text>
+  <rect x="258" y="822" width="92" height="40" rx="20" fill="#15171a" stroke="#475569"/>
+  <text x="304" y="847" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="800" text-anchor="middle">Reject</text>
+  <rect x="928" y="148" width="198" height="58" rx="18" fill="#111827" stroke="#283244"/>
+  <text x="1027" y="184" fill="#f9a8d4" font-family="Arial, sans-serif" font-size="18" font-weight="800" text-anchor="middle">Real FitCoach AI</text>
+  <path d="M1051 312c0-36 29-65 65-65s65 29 65 65-29 65-65 65-65-29-65-65Z" fill="#ff4f9a" opacity=".14"/>
+  <path d="M1091 312c0-14 11-25 25-25s25 11 25 25-11 25-25 25-25-11-25-25Z" fill="#ff4f9a"/>
+</svg>
